@@ -1,3 +1,15 @@
 Here we ideally create the structure for our interface and the tables required for mysql 
 so we will be looking for suggestions here
 to add stuff to this just pull edit then push (i will then accept it to main)
+
+
+📁 MUN_System_Shared/
+├── 📁 Database_Access/
+│   ├── 🗄️ README.md  # Connection instructions
+│   └── 🔑 credentials.env.sample
+├── 📁 Documents/
+│   ├── 📝 Rules.pdf
+│   └── 📅 Schedule.xlsx
+└── 📁 Code/
+    ├── 🐍 backend/
+    └── ⚛️ frontend/

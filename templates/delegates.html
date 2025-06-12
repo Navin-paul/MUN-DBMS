@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delegates List</title>
+</head>
+<body>
+    <h1>Delegates</h1>
+    <table border="1">
+        <tr>
+            {% for key in delegates[0].keys() %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+        {% for delegate in delegates %}
+        <tr>
+            {% for value in delegate.values() %}
+                <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

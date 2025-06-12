@@ -1,0 +1,43 @@
+from flask import Flask,jsonify
+import mysql.connector
+import os  # For environment variables
+from dotenv import load_dotenv  # For .env file
+from waitress import serve
+
+load_dotenv()  # Load environment variables from .env file
+
+app = Flask(__name__)
+
+# Create a route to get the table names
+
+
+
+@app.route('/')
+@app.route('/index')
+def index():
+    return "Welcome to the Delegate Management System!" 
+
+@app.route('/get-table', methods=['GET'])
+def get_table():
+    con = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password=os.getenv("DB_PASSWORD"),
+        database="sboamun",
+    )
+    cursor = con.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM delegates")
+    delegates = cursor.fetchall()
+    cursor.close()
+    con.close()
+    return jsonify({"delegates": delegates}), 200
+
+if __name__ == '__main__':
+    print("Starting server on http://localhost:8000")
+    serve(app, host='0.0.0.0', port=8000)
+
+
+
+
+
+
