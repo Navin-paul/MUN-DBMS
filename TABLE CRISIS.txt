@@ -1,0 +1,73 @@
+TABLE CRISIS:
+CODE:
+SELECT *
+FROM CRISIS
+ORDER BY 
+    CASE "Country Preference 1"
+        WHEN 'USA' THEN 1
+        WHEN 'China' THEN 2
+        WHEN 'Russia' THEN 3
+        WHEN 'UK' THEN 4
+        WHEN 'France' THEN 5
+        WHEN 'India' THEN 6
+        WHEN 'Germany' THEN 7
+        WHEN 'Japan' THEN 8
+        WHEN 'Brazil' THEN 9
+        WHEN 'South Africa' THEN 10
+        WHEN 'Canada' THEN 11
+        WHEN 'Australia' THEN 12
+        WHEN 'Italy' THEN 13
+        WHEN 'Mexico' THEN 14
+        WHEN 'Saudi Arabia' THEN 15
+        WHEN 'Spain' THEN 16
+        WHEN 'Turkey' THEN 17
+        WHEN 'Egypt' THEN 18
+        WHEN 'Israel' THEN 19
+        WHEN 'Pakistan' THEN 20
+        WHEN 'Nigeria' THEN 21
+        WHEN 'South Korea' THEN 22
+        WHEN 'Indonesia' THEN 23
+        WHEN 'Argentina' THEN 24
+        WHEN 'Sweden' THEN 25
+        WHEN 'Norway' THEN 26
+        WHEN 'Iran' THEN 27
+        WHEN 'Bangladesh' THEN 28
+        WHEN 'Ukraine' THEN 29
+        WHEN 'Thailand' THEN 30
+        WHEN 'Netherlands' THEN 31
+        WHEN 'Poland' THEN 32
+        WHEN 'Switzerland' THEN 33
+        WHEN 'Malaysia' THEN 34
+        WHEN 'Iraq' THEN 35
+        WHEN 'Belgium' THEN 36
+        WHEN 'Greece' THEN 37
+        WHEN 'Philippines' THEN 38
+        WHEN 'Denmark' THEN 39
+        ELSE 100
+    END,
+    "Country Preference 1" ASC;
+
++--------------------+------------------------------------+------+--------------+-----------+----------------------+----------------------+
+| Name               | School                             | Age  | Experience   | Committee | Country Preference 1 | Country Preference 2 |
++--------------------+------------------------------------+------+--------------+-----------+----------------------+----------------------+
+| Billy Duncan       | Strickland PLC School              |   14 | None         | CRISIS    | USA                  | Spain                |
+| William Harris     | Massey LLC School                  |   17 | None         | CRISIS    | France               | Iraq                 |
+| David Carey        | Cooke-Montgomery School            |   15 | Intermediate | CRISIS    | Russia               | Vietnam              |
+| Melissa Shields    | Jones, Cannon and Wood School      |   17 | None         | CRISIS    | China                | Bangladesh           |
+| Natalie Hutchinson | Larson-Wise School                 |   16 | Beginner     | CRISIS    | Germany              | Sweden               |
+| James Garcia       | Frederick, Reyes and Lester School |   17 | None         | CRISIS    | India                | Spain                |
+| Doris Robinson     | Morgan, Sanders and Ellis School   |   16 | None         | CRISIS    | Brazil               | Switzerland          |
+| Jordan Flores      | Marshall-Johnson School            |   15 | Intermediate | CRISIS    | South Korea          | Egypt                |
+| Alex Parker        | Jones-Morales School               |   16 | Beginner     | CRISIS    | Italy                | Malaysia             |
+| Lauren Baker       | Day Group School                   |   15 | Intermediate | CRISIS    | Italy                | Vietnam              |
+| Rachel Martinez    | Parks-Kirby School                 |   17 | Advanced     | CRISIS    | South Africa         | UK                   |
+| Sara Thornton      | Jacobson PLC School                |   17 | Beginner     | CRISIS    | South Africa         | Malaysia             |
+| Shannon Gutierrez  | Lopez LLC School                   |   17 | Beginner     | CRISIS    | Nigeria              | Thailand             |
+| Janet Morris       | Coleman, Black and Perry School    |   17 | Intermediate | CRISIS    | Egypt                | Argentina            |
+| Tammy Herrera MD   | Roberts Inc School                 |   14 | Beginner     | CRISIS    | Norway               | Nigeria              |
+| Frank Love         | Luna Inc School                    |   14 | Beginner     | CRISIS    | Poland               | Germany              |
+| Andrea Medina      | Stevens-Ortiz School               |   16 | Advanced     | CRISIS    | Netherlands          | France               |
+| Lauren Savage      | Oneill Inc School                  |   16 | None         | CRISIS    | Pakistan             | India                |
+| Brandon Brock      | Young Ltd School                   |   15 | Intermediate | CRISIS    | Malaysia             | USA                  |
+| Hannah Knox DDS    | Wilson-Wagner School               |   14 | Beginner     | CRISIS    | Israel               | Japan                |
++--------------------+------------------------------------+------+--------------+-----------+----------------------+----------------------+

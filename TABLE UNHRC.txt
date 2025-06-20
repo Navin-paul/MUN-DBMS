@@ -1,0 +1,83 @@
+TABLE UNHRC:
+CODE:
+SELECT *
+FROM UNHRC
+ORDER BY 
+    CASE "Country Preference 1"
+        WHEN 'USA' THEN 1
+        WHEN 'China' THEN 2
+        WHEN 'Russia' THEN 3
+        WHEN 'UK' THEN 4
+        WHEN 'France' THEN 5
+        WHEN 'India' THEN 6
+        WHEN 'Germany' THEN 7
+        WHEN 'Japan' THEN 8
+        WHEN 'Brazil' THEN 9
+        WHEN 'South Africa' THEN 10
+        WHEN 'Canada' THEN 11
+        WHEN 'Australia' THEN 12
+        WHEN 'Italy' THEN 13
+        WHEN 'Mexico' THEN 14
+        WHEN 'Saudi Arabia' THEN 15
+        WHEN 'Spain' THEN 16
+        WHEN 'Turkey' THEN 17
+        WHEN 'Egypt' THEN 18
+        WHEN 'Israel' THEN 19
+        WHEN 'Pakistan' THEN 20
+        WHEN 'Nigeria' THEN 21
+        WHEN 'South Korea' THEN 22
+        WHEN 'Indonesia' THEN 23
+        WHEN 'Argentina' THEN 24
+        WHEN 'Sweden' THEN 25
+        WHEN 'Norway' THEN 26
+        WHEN 'Iran' THEN 27
+        WHEN 'Bangladesh' THEN 28
+        WHEN 'Ukraine' THEN 29
+        WHEN 'Thailand' THEN 30
+        WHEN 'Netherlands' THEN 31
+        WHEN 'Poland' THEN 32
+        WHEN 'Switzerland' THEN 33
+        WHEN 'Malaysia' THEN 34
+        WHEN 'Iraq' THEN 35
+        WHEN 'Belgium' THEN 36
+        WHEN 'Greece' THEN 37
+        WHEN 'Philippines' THEN 38
+        WHEN 'Denmark' THEN 39
+        ELSE 100
+    END,
+    "Country Preference 1" ASC;
+
++---------------------+--------------------------------------+------+--------------+-----------+----------------------+----------------------+
+| Name                | School                               | Age  | Experience   | Committee | Country Preference 1 | Country Preference 2 |
++---------------------+--------------------------------------+------+--------------+-----------+----------------------+----------------------+
+| Jon Cooper          | Wilkinson-Jensen School              |   15 | Intermediate | UNHRC     | USA                  | Norway               |
+| Jennifer Gonzales   | Horne, Scott and Sandoval School     |   15 | None         | UNHRC     | USA                  | Egypt                |
+| Kimberly Hansen     | Nguyen and Sons School               |   17 | Beginner     | UNHRC     | Russia               | Turkey               |
+| Amy Parker          | Jones LLC School                     |   16 | None         | UNHRC     | China                | Sweden               |
+| David Lopez         | Wilkerson, Barnes and Abbott School  |   15 | Advanced     | UNHRC     | China                | Argentina            |
+| Maureen Moore       | Lindsey Ltd School                   |   14 | None         | UNHRC     | India                | Thailand             |
+| Philip Glover       | Smith, Gonzales and Clarke School    |   15 | Beginner     | UNHRC     | India                | Netherlands          |
+| Brandi Tanner       | Dominguez, Holloway and Price School |   15 | Beginner     | UNHRC     | Brazil               | Greece               |
+| Christopher Ford    | Garcia, Randolph and Carter School   |   15 | Advanced     | UNHRC     | Brazil               | Greece               |
+| Jessica Murphy      | Brown, Delgado and Davis School      |   16 | Beginner     | UNHRC     | Canada               | Netherlands          |
+| Colleen Butler      | Garcia-Bell School                   |   16 | Beginner     | UNHRC     | Australia            | Greece               |
+| Sarah Navarro       | Brown, Barrett and Kelly School      |   14 | None         | UNHRC     | South Korea          | Poland               |
+| Lori Franklin       | Fox, Luna and Scott School           |   16 | Advanced     | UNHRC     | Italy                | Malaysia             |
+| Jorge Liu           | Flores LLC School                    |   14 | Advanced     | UNHRC     | Italy                | Switzerland          |
+| Katie Ashley        | Nelson-Johnston School               |   17 | Beginner     | UNHRC     | Italy                | Canada               |
+| Nicole Riley        | Alvarado PLC School                  |   14 | Beginner     | UNHRC     | South Africa         | Russia               |
+| Dr. Amber Banks     | Hanson-Mcdonald School               |   14 | Intermediate | UNHRC     | South Africa         | Argentina            |
+| Lori Webster PhD    | Hancock, Cisneros and Ware School    |   16 | Advanced     | UNHRC     | South Africa         | Pakistan             |
+| Kevin Rose          | Ryan LLC School                      |   15 | Advanced     | UNHRC     | South Africa         | Egypt                |
+| Patricia Jacobs     | Malone, Rowe and Garza School        |   14 | Advanced     | UNHRC     | South Africa         | Israel               |
+| Brian Gray          | Smith Ltd School                     |   15 | Beginner     | UNHRC     | Spain                | France               |
+| Colin Ryan          | Marsh, Murray and Moran School       |   17 | Beginner     | UNHRC     | Spain                | France               |
+| Ashley Sullivan     | Craig-Wilson School                  |   16 | Intermediate | UNHRC     | Argentina            | Brazil               |
+| Paula Diaz          | Carter, Campbell and George School   |   15 | Intermediate | UNHRC     | Nigeria              | Saudi Arabia         |
+| Michelle Williams   | Coleman-Nelson School                |   15 | Advanced     | UNHRC     | Egypt                | Norway               |
+| Andre Morales       | Martin and Sons School               |   14 | Intermediate | UNHRC     | Norway               | South Africa         |
+| Elizabeth Gutierrez | Meadows, Carney and Cowan School     |   15 | Beginner     | UNHRC     | Pakistan             | Ukraine              |
+| Vanessa Huynh       | Becker Ltd School                    |   14 | None         | UNHRC     | Vietnam              | Iran                 |
+| Dawn Wright         | Anderson PLC School                  |   14 | None         | UNHRC     | Philippines          | Nigeria              |
+| Marc Hale           | Graves Ltd School                    |   14 | Advanced     | UNHRC     | Israel               | India                |
++---------------------+--------------------------------------+------+--------------+-----------+----------------------+----------------------+

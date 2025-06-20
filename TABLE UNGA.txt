@@ -1,0 +1,83 @@
+TABLE UNGA:
+CODE:
+SELECT *
+FROM UNGA
+ORDER BY 
+    CASE "Country Preference 1"
+        WHEN 'USA' THEN 1
+        WHEN 'China' THEN 2
+        WHEN 'Russia' THEN 3
+        WHEN 'UK' THEN 4
+        WHEN 'France' THEN 5
+        WHEN 'India' THEN 6
+        WHEN 'Germany' THEN 7
+        WHEN 'Japan' THEN 8
+        WHEN 'Brazil' THEN 9
+        WHEN 'South Africa' THEN 10
+        WHEN 'Canada' THEN 11
+        WHEN 'Australia' THEN 12
+        WHEN 'Italy' THEN 13
+        WHEN 'Mexico' THEN 14
+        WHEN 'Saudi Arabia' THEN 15
+        WHEN 'Spain' THEN 16
+        WHEN 'Turkey' THEN 17
+        WHEN 'Egypt' THEN 18
+        WHEN 'Israel' THEN 19
+        WHEN 'Pakistan' THEN 20
+        WHEN 'Nigeria' THEN 21
+        WHEN 'South Korea' THEN 22
+        WHEN 'Indonesia' THEN 23
+        WHEN 'Argentina' THEN 24
+        WHEN 'Sweden' THEN 25
+        WHEN 'Norway' THEN 26
+        WHEN 'Iran' THEN 27
+        WHEN 'Bangladesh' THEN 28
+        WHEN 'Ukraine' THEN 29
+        WHEN 'Thailand' THEN 30
+        WHEN 'Netherlands' THEN 31
+        WHEN 'Poland' THEN 32
+        WHEN 'Switzerland' THEN 33
+        WHEN 'Malaysia' THEN 34
+        WHEN 'Iraq' THEN 35
+        WHEN 'Belgium' THEN 36
+        WHEN 'Greece' THEN 37
+        WHEN 'Philippines' THEN 38
+        WHEN 'Denmark' THEN 39
+        ELSE 100
+    END,
+    "Country Preference 1" ASC;
+
++--------------------+----------------------------------------+------+--------------+-----------+----------------------+----------------------+
+| Name               | School                                 | Age  | Experience   | Committee | Country Preference 1 | Country Preference 2 |
++--------------------+----------------------------------------+------+--------------+-----------+----------------------+----------------------+
+| Robyn Smith        | Ray Ltd School                         |   15 | None         | UNGA      | Russia               | Italy                |
+| Martin Singh       | Sanchez PLC School                     |   14 | Beginner     | UNGA      | Russia               | Ukraine              |
+| Mrs. Holly Huffman | Flores-Davis School                    |   15 | Advanced     | UNGA      | Russia               | Turkey               |
+| Patrick Hull       | Morris, Cruz and Dawson School         |   17 | Intermediate | UNGA      | Japan                | Sweden               |
+| Lisa Anderson      | Jones-Pierce School                    |   14 | Intermediate | UNGA      | Brazil               | Indonesia            |
+| Kevin Kelly        | Mendoza PLC School                     |   15 | Beginner     | UNGA      | Brazil               | Poland               |
+| Lori Simmons       | Diaz, Moody and Cook School            |   17 | Beginner     | UNGA      | Canada               | Spain                |
+| Rachel Grimes      | Castillo-Nguyen School                 |   17 | Advanced     | UNGA      | Canada               | Netherlands          |
+| Tyler Villanueva   | Forbes-Craig School                    |   16 | None         | UNGA      | Australia            | Vietnam              |
+| Mark Williams      | Vasquez LLC School                     |   16 | None         | UNGA      | South Korea          | Indonesia            |
+| Devin Cox          | Carrillo-Nunez School                  |   14 | Advanced     | UNGA      | South Korea          | India                |
+| Jamie Smith        | Mcgee-Sparks School                    |   15 | Intermediate | UNGA      | Italy                | Saudi Arabia         |
+| Michael Petersen   | Brown-Gross School                     |   17 | Advanced     | UNGA      | Italy                | Iran                 |
+| Steven Ashley      | Williams, Montoya and Mcconnell School |   14 | Advanced     | UNGA      | Italy                | UK                   |
+| Stephanie Powell   | Pittman-Moran School                   |   17 | None         | UNGA      | Mexico               | Germany              |
+| Jason Hernandez    | Daugherty-Huff School                  |   17 | Beginner     | UNGA      | South Africa         | Israel               |
+| Kim Gibson         | Pena-Mendez School                     |   14 | Beginner     | UNGA      | Saudi Arabia         | Spain                |
+| Wanda Parker       | Shepherd-Cox School                    |   14 | None         | UNGA      | Spain                | France               |
+| Robert Rice        | Henry, Mendoza and Willis School       |   16 | None         | UNGA      | Spain                | Iran                 |
+| Seth Lee           | Vang, Jefferson and Burns School       |   17 | Beginner     | UNGA      | Spain                | Belgium              |
+| Laura Lopez        | Franco-Gillespie School                |   16 | Advanced     | UNGA      | Argentina            | Japan                |
+| Clayton Ortiz      | Gibson, Holder and Morales School      |   15 | Intermediate | UNGA      | Norway               | Thailand             |
+| Jordan Leblanc     | Doyle-Adams School                     |   15 | Beginner     | UNGA      | Sweden               | Egypt                |
+| Monica Boyd        | Flowers and Sons School                |   17 | Intermediate | UNGA      | Pakistan             | South Africa         |
+| Melissa Newton     | Nguyen and Sons School                 |   15 | None         | UNGA      | Bangladesh           | Japan                |
+| Deborah Le         | Howard, Singleton and Mckay School     |   14 | Advanced     | UNGA      | Thailand             | Pakistan             |
+| Rebecca Wilson     | Ward-Davis School                      |   14 | Advanced     | UNGA      | Malaysia             | Indonesia            |
+| Brandon Mann II    | Griffin-Clark School                   |   14 | Intermediate | UNGA      | Malaysia             | Nigeria              |
+| Kimberly Miller    | Moore-Campbell School                  |   16 | None         | UNGA      | Ukraine              | Norway               |
+| Jessica Valdez     | Hughes, Hodges and May School          |   15 | Beginner     | UNGA      | Ukraine              | Norway               |
++--------------------+----------------------------------------+------+--------------+-----------+----------------------+----------------------+

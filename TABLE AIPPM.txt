@@ -1,0 +1,93 @@
+TABLE AIPPM:
+CODE:
+SELECT *
+FROM AIPPM
+ORDER BY 
+    CASE "Country Preference 1"
+        WHEN 'USA' THEN 1
+        WHEN 'China' THEN 2
+        WHEN 'Russia' THEN 3
+        WHEN 'UK' THEN 4
+        WHEN 'France' THEN 5
+        WHEN 'India' THEN 6
+        WHEN 'Germany' THEN 7
+        WHEN 'Japan' THEN 8
+        WHEN 'Brazil' THEN 9
+        WHEN 'South Africa' THEN 10
+        WHEN 'Canada' THEN 11
+        WHEN 'Australia' THEN 12
+        WHEN 'Italy' THEN 13
+        WHEN 'Mexico' THEN 14
+        WHEN 'Saudi Arabia' THEN 15
+        WHEN 'Spain' THEN 16
+        WHEN 'Turkey' THEN 17
+        WHEN 'Egypt' THEN 18
+        WHEN 'Israel' THEN 19
+        WHEN 'Pakistan' THEN 20
+        WHEN 'Nigeria' THEN 21
+        WHEN 'South Korea' THEN 22
+        WHEN 'Indonesia' THEN 23
+        WHEN 'Argentina' THEN 24
+        WHEN 'Sweden' THEN 25
+        WHEN 'Norway' THEN 26
+        WHEN 'Iran' THEN 27
+        WHEN 'Bangladesh' THEN 28
+        WHEN 'Ukraine' THEN 29
+        WHEN 'Thailand' THEN 30
+        WHEN 'Netherlands' THEN 31
+        WHEN 'Poland' THEN 32
+        WHEN 'Switzerland' THEN 33
+        WHEN 'Malaysia' THEN 34
+        WHEN 'Iraq' THEN 35
+        WHEN 'Belgium' THEN 36
+        WHEN 'Greece' THEN 37
+        WHEN 'Philippines' THEN 38
+        WHEN 'Denmark' THEN 39
+        ELSE 100
+    END,
+    "Country Preference 1" ASC;
+
++-------------------------+------------------------------------+------+--------------+-----------+----------------------+----------------------+
+| Name                    | School                             | Age  | Experience   | Committee | Country Preference 1 | Country Preference 2 |
++-------------------------+------------------------------------+------+--------------+-----------+----------------------+----------------------+
+| Kevin Hayes             | Gonzalez PLC School                |   15 | Advanced     | AIPPM     | USA                  | Spain                |
+| David Skinner           | Singh-Mills School                 |   14 | Intermediate | AIPPM     | USA                  | Norway               |
+| Catherine Guerrero      | Malone Ltd School                  |   17 | Intermediate | AIPPM     | France               | Switzerland          |
+| Eric Foster             | Bush-Hays School                   |   14 | Beginner     | AIPPM     | Russia               | France               |
+| Sean Walker PhD         | Walton Ltd School                  |   17 | Beginner     | AIPPM     | Russia               | Egypt                |
+| Sandy Harris            | Martin-Barnett School              |   14 | None         | AIPPM     | Russia               | Brazil               |
+| Jordan Choi             | Martin and Sons School             |   15 | Advanced     | AIPPM     | UK                   | Pakistan             |
+| Miss Stacy Bradley PhD  | Garrison PLC School                |   14 | Beginner     | AIPPM     | Canada               | Brazil               |
+| Christopher Wang        | Jimenez, Mendoza and Foster School |   15 | Intermediate | AIPPM     | Australia            | Spain                |
+| Dustin Elliott          | Williams Inc School                |   16 | Intermediate | AIPPM     | Australia            | Turkey               |
+| Mary White              | Summers, English and Patel School  |   14 | Beginner     | AIPPM     | Australia            | Argentina            |
+| Laura Daniels           | Gomez, Barnes and Whitehead School |   16 | Advanced     | AIPPM     | South Korea          | France               |
+| Erica Stuart            | Saunders, Garza and Berger School  |   15 | Intermediate | AIPPM     | South Korea          | Brazil               |
+| Mrs. Vanessa Pacheco MD | Russell-King School                |   14 | None         | AIPPM     | South Korea          | Israel               |
+| Austin Maxwell          | Wilson-Wilkins School              |   15 | Advanced     | AIPPM     | South Korea          | India                |
+| Brian Martin            | Mclaughlin-Martin School           |   17 | Intermediate | AIPPM     | South Korea          | Norway               |
+| Jennifer Medina         | Hendrix, Deleon and Riley School   |   16 | Beginner     | AIPPM     | Italy                | Russia               |
+| Erin Woods              | Strickland-Harvey School           |   15 | None         | AIPPM     | Turkey               | Thailand             |
+| Joyce Brown             | Ibarra, Ford and Wilson School     |   16 | Advanced     | AIPPM     | Turkey               | Japan                |
+| Dylan Hall              | Conner Inc School                  |   17 | Beginner     | AIPPM     | Turkey               | Nigeria              |
+| Jennifer Smith          | Barrera-Davis School               |   17 | Advanced     | AIPPM     | Spain                | South Korea          |
+| Mrs. Maria Chavez       | Griffith-Buckley School            |   14 | Advanced     | AIPPM     | Spain                | Mexico               |
+| Margaret Turner         | Johnson Ltd School                 |   14 | Intermediate | AIPPM     | Spain                | Norway               |
+| Melissa Meadows MD      | Pierce-Williams School             |   14 | Beginner     | AIPPM     | Spain                | Argentina            |
+| Scott Reid              | Murphy-Brown School                |   15 | Beginner     | AIPPM     | Indonesia            | Iran                 |
+| Jeremiah Mueller        | Gonzalez, Eaton and Montes School  |   14 | Beginner     | AIPPM     | Indonesia            | Turkey               |
+| Jay Walker              | Ewing-Phillips School              |   15 | Advanced     | AIPPM     | Argentina            | Mexico               |
+| Katherine Ellison       | White-Carey School                 |   17 | Intermediate | AIPPM     | Nigeria              | Spain                |
+| Matthew Hunter          | Douglas-Warner School              |   17 | Advanced     | AIPPM     | Nigeria              | Iran                 |
+| Debbie Perez            | Anderson-Nelson School             |   16 | Beginner     | AIPPM     | Egypt                | Iraq                 |
+| April Perez             | Reed-Morton School                 |   14 | Intermediate | AIPPM     | Egypt                | Canada               |
+| Christina Turner        | Ramirez, Martinez and Mccoy School |   17 | Beginner     | AIPPM     | Sweden               | Iran                 |
+| Tony Brown              | Shannon-Dixon School               |   14 | Intermediate | AIPPM     | Sweden               | Norway               |
+| Scott Hansen            | Davis-Ramirez School               |   16 | Advanced     | AIPPM     | Poland               | Iran                 |
+| Jill Smith              | Hart-Morrow School                 |   14 | Intermediate | AIPPM     | Netherlands          | South Africa         |
+| Larry Howell            | Smith PLC School                   |   14 | Advanced     | AIPPM     | Pakistan             | South Africa         |
+| Christopher Moran       | White-Salinas School               |   16 | None         | AIPPM     | Bangladesh           | Argentina            |
+| Tiffany Ray             | Swanson-Williams School            |   17 | Advanced     | AIPPM     | Thailand             | Spain                |
+| Elizabeth Green DDS     | Rangel, Smith and Duran School     |   15 | Intermediate | AIPPM     | Vietnam              | Saudi Arabia         |
+| Cody Kane               | Williams-Marshall School           |   17 | Intermediate | AIPPM     | Ukraine              | Mexico               |
++-------------------------+------------------------------------+------+--------------+-----------+----------------------+----------------------+
