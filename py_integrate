@@ -1,0 +1,77 @@
+from flask import Flask, render_template, request, redirect, url_for
+import mysql.connector
+import os
+from dotenv import load_dotenv
+from waitress import serve
+
+load_dotenv()  # Load environment variables from .env file
+
+app = Flask(__name__)
+
+# Create a route to get the table names
+
+
+
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template("MAIN.html")
+
+@app.route('/get-table')
+def get_table():
+    con = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password=os.getenv("DB_PASSWORD"),
+        database="sboamun",
+    )
+    cursor = con.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM delegates")
+    delegates = cursor.fetchall()
+    cursor.close()
+    con.close()
+    return render_template("delegates.html", delegates=delegates)
+
+@app.route('/main')
+def main():
+    return render_template("MAIN.html")
+
+@app.route('/register', methods=['POST'])
+def register():
+    # Get form data
+    full_name = request.form.get('fullName')
+    school = request.form.get('school')
+    email = request.form.get('email')
+    phone = request.form.get('phone')
+    experience = request.form.get('experience')
+    country1 = request.form.get('country1')
+    country2 = request.form.get('country2')
+    country3 = request.form.get('country3')
+    committee = request.form.get('committee')
+
+    # Save to database
+    con = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password=os.getenv("DB_PASSWORD"),
+        database="sboamun",
+    )
+    cursor = con.cursor()
+    cursor.execute(
+        "INSERT INTO delegates (full_name, school, email, phone, experience, country1, country2, country3, committee) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        (full_name, school, email, phone, experience, country1, country2, country3, committee)
+    )
+    con.commit()
+    cursor.close()
+    con.close()
+
+    return f"Thank you, {full_name}! Your registration is received."
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8000, debug=True)
+
+
+
+
+
+

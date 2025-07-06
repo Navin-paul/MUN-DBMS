@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Delegates List</title>
+  <title>My MUN Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Delegates</h1>
+    {% if delegates %}
     <table border="1">
         <tr>
             {% for key in delegates[0].keys() %}
@@ -19,5 +21,8 @@
         </tr>
         {% endfor %}
     </table>
+    {% else %}
+        <p>No delegates found.</p>
+    {% endif %}
 </body>
 </html>
