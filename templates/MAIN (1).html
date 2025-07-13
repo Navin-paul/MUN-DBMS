@@ -1620,7 +1620,7 @@
                         <li><a href="#" id="homeLink"><i class="fas fa-home"></i> Home</a></li>
                         <li><a href="#" id="agendaLink"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
                         <li><a href="#" id="resourcesLink"><i class="fas fa-book"></i> Resources</a></li>
-                        <li><a href="/register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                        <li><a href="#" id="registerLink"><i class="fas fa-user-plus"></i> Register</a></li>
                         <li><a href="#" id="aboutLink"><i class="fas fa-info-circle"></i> About</a></li>
                     </ul>
                 </nav>
@@ -1706,7 +1706,164 @@
             </section>
         </section>
 
-        
+        <!-- Registration Page -->
+        <section class="page" id="registerPage">
+            <section class="hero">
+                <h1>Delegate Registration</h1>
+                <p>Complete the form below to secure your participation in the conference. All fields are required unless otherwise noted.</p>
+            </section>
+            
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Join the Global Diplomacy Experience</h2>
+                    <p>Register now to become part of our international community of future leaders and diplomats.</p>
+                </div>
+                
+                <form id="munRegistrationForm" method="post" action="{{ url_for('register') }}">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="school">School/Organization</label>
+                            <input type="text" id="school" name="school" required placeholder="Enter your institution">
+                            <i class="fas fa-university input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            <i class="fas fa-envelope input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            <i class="fas fa-phone input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="experience">MUN Experience</label>
+                            <textarea id="experience" name="experience" rows="4" required placeholder="Describe your previous MUN experience, including conferences attended, committees participated in, awards received, etc."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="committee">Committee Preference</label>
+                        <select id="committee" name="committee" required>
+                            <option value="">Select a committee</option>
+                            <option value="UNGA">United Nations General Assembly (30 delegates)</option>
+                            <option value="UNHRC">United Nations Human Rights Council (30 delegates)</option>
+                            <option value="WHO">World Health Organization (30 delegates)</option>
+                            <option value="AIPPM">All India Political Parties Meet (40 delegates)</option>
+                            <option value="CRISIS">Crisis Committee (20 delegates)</option>
+                        </select>
+                    
+                    </div>
+                    <div class="countries-section">
+                        <h3><i class="fas fa-flag"></i> Country Preferences</h3>
+                        <div class="countries-grid">
+                            <div class="form-group">
+                                <label for="country1">First Preference</label>
+                                <select id="country1" name="country1" required>
+                                    <option value="">Select a country</option>
+                                    <option value="USA">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="FR">France</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="CN">China</option>
+                                    <option value="RU">Russia</option>
+                                    <option value="IN">India</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="SA">South Africa</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country2">Second Preference</label>
+                                <select id="country2" name="country2">
+                                    <option value="">Select a country</option>
+                                    <option value="USA">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="FR">France</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="CN">China</option>
+                                    <option value="RU">Russia</option>
+                                    <option value="IN">India</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="SA">South Africa</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country3">Third Preference</label>
+                                <select id="country3" name="country3">
+                                    <option value="">Select a country</option>
+                                    <option value="USA">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="FR">France</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="CN">China</option>
+                                    <option value="RU">Russia</option>
+                                    <option value="IN">India</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="SA">South Africa</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="committee">Committee Preference</label>
+                        <select id="committee" name="committee" required>
+                            <option value="">Select a committee</option>
+                            <option value="UNGA">United Nations General Assembly (30 delegates)</option>
+                            <option value="UNHRC">United Nations Human Rights Council (30 delegates)</option>
+                            <option value="WHO">World Health Organization (30 delegates)</option>
+                            <option value="AIPPM">All India Political Parties Meet (40 delegates)</option>
+                            <option value="CRISIS">Crisis Committee (20 delegates)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="button" class="payment-btn" id="paymentBtn">Complete Registration & Payment <i class="fas fa-arrow-right"></i></button>
+                        <button type="button" class="back-btn" id="backToHome"><i class="fas fa-arrow-left"></i> Back to Home</button>
+                    </div>
+                </form>
+            </div>
+            
+            <section class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>International Experience</h3>
+                    <p>Engage with delegates from around the world in simulated UN committees and diplomatic negotiations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Public Speaking</h3>
+                    <p>Develop your public speaking and negotiation skills in a supportive yet challenging environment.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Awards & Recognition</h3>
+                    <p>Outstanding delegates will be recognized with awards and certificates of excellence.</p>
+                </div>
+            </section>
+        </section>
 
         <!-- Payment Page -->
         <section class="page" id="paymentPage">
@@ -1797,13 +1954,9 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{ url_for('register') }}" class="btn btn-primary">Register Now</a>
+                
                 <div class="btn-container">
-                    <div class="btn-container">
-
-    </a>
-    <button class="payment-btn" id="submitPayment">Submit Payment Proof <i class="fas fa-check"></i></button>
-</div>
+                    <button class="back-btn" id="backToRegister"><i class="fas fa-arrow-left"></i> Back to Registration</button>
                     <button class="payment-btn" id="submitPayment">Submit Payment Proof <i class="fas fa-check"></i></button>
                 </div>
             </div>

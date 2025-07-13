@@ -36,36 +36,59 @@ def get_table():
 def main():
     return render_template("MAIN.html")
 
-@app.route('/register', methods=['POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    # Get form data
-    full_name = request.form.get('fullName')
-    school = request.form.get('school')
-    email = request.form.get('email')
-    phone = request.form.get('phone')
-    experience = request.form.get('experience')
-    country1 = request.form.get('country1')
-    country2 = request.form.get('country2')
-    country3 = request.form.get('country3')
-    committee = request.form.get('committee')
+    if request.method == 'POST':
+        # Get form data
+        full_name = request.form.get('fullName')
+        school = request.form.get('school')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        age = request.form.get('age')
+        muns = request.form.get('muns')
+        bd = request.form.get('bd')
+        hc = request.form.get('hc')
+        sm = request.form.get('sm')
+        hm = request.form.get('hm')
+        vm = request.form.get('vm')
+        
+        country1 = request.form.get('country1')
+        country2 = request.form.get('country2')
+        committee = request.form.get('committee')
 
-    # Save to database
-    con = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password=os.getenv("DB_PASSWORD"),
-        database="sboamun",
-    )
-    cursor = con.cursor()
-    cursor.execute(
-        "INSERT INTO delegates (full_name, school, email, phone, experience, country1, country2, country3, committee) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
-        (full_name, school, email, phone, experience, country1, country2, country3, committee)
-    )
-    con.commit()
-    cursor.close()
-    con.close()
+        # Save to database
+        con = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password=os.getenv("DB_PASSWORD"),
+            database="sboamun",
+        )
+        cursor = con.cursor()
+        cursor.execute(
+            "INSERT INTO temp_dels (Name, School, Age, MUNs, Committee, `Country 1`, `Country 2`, BD, HC, SM, HM, VM) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+            (
+                full_name,         # Name
+                school,            # School
+                age,               # Age
+                muns,              # MUNs
+                committee,         # Committee
+                country1,          # Country 1
+                country2,          # Country 2
+                bd,                # BD
+                hc,                # HC
+                sm,                # SM
+                hm,                # HM
+                vm                 # VM
+            )
+        )
+        con.commit()
+        cursor.close()
+        con.close()
 
-    return f"Thank you, {full_name}! Your registration is received."
+        return f"Thank you, {full_name}! Your registration is received."
+    else:
+        # Show the registration form
+        return render_template("register.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)

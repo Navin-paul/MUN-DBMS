@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delegate Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      .form-section { display: none; }
+      .form-section.active { display: block; }
+    </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-wrapper">
+      <div class="header-left">
+        <a href="/" class="logo-icon">
+          <div class="logo-icon">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <span class="logo-text">SBOA <strong>MUN</strong></span>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <ul class="nav-links">
+          <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#agenda"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
+          <li><a href="#resources"><i class="fas fa-book"></i> Resources</a></li>
+          <li><a href="{{ url_for('register') }}" class="active"><i class="fas fa-user-plus"></i> Register</a></li>
+          <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+    
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Join the Global Diplomacy Experience</h2>
+        <p>Register now to become part of our international community of future leaders and diplomats.</p>
+      </div>
+
+      <form id="munRegistrationForm" method="post" action="{{ url_for('register') }}">
+        <!-- Section 1: Personal Info & MUN Experience -->
+        <div class="form-section active" id="section1">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="school"><i class="fas fa-university"></i> School/Organization</label>
+              <input type="text" id="school" name="school" required placeholder="Enter your institution">
+            </div>
+            <div class="form-group">
+              <label for="age"><i class="fas fa-user-clock"></i> Age</label>
+              <input type="number" id="age" name="age" min="14" required placeholder="Enter your age">
+            </div>
+            <div class="form-group">
+              <label for="muns"><i class="fas fa-flag-checkered"></i> Number of MUNs Attended</label>
+              <input type="number" id="muns" name="muns" min="0" required placeholder="Enter number of MUNs">
+            </div>
+            <div class="form-group flex-mun-awards">
+              <div>
+                <label for="bd"><i class="fas fa-medal"></i> BD</label>
+                <input type="number" id="bd" name="bd" min="0" value="0" required>
+              </div>
+              <div>
+                <label for="hc"><i class="fas fa-award"></i> HC</label>
+                <input type="number" id="hc" name="hc" min="0" value="0" required>
+              </div>
+              <div>
+                <label for="sm"><i class="fas fa-certificate"></i> SM</label>
+                <input type="number" id="sm" name="sm" min="0" value="0" required>
+              </div>
+              <div>
+                <label for="hm"><i class="fas fa-trophy"></i> HM</label>
+                <input type="number" id="hm" name="hm" min="0" value="0" required>
+              </div>
+              <div>
+                <label for="vm"><i class="fas fa-star"></i> VM</label>
+                <input type="number" id="vm" name="vm" min="0" value="0" required>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button type="button" class="payment-btn" onclick="showSection(2)">Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Section 2: Committee and Portfolio Selection -->
+        <div class="form-section" id="section2">
+          <div class="form-group full-width">
+            <label for="committee"><i class="fas fa-users"></i> Committee Preference</label>
+            <select id="committee" name="committee" required>
+              <option value="">Select a committee</option>
+              <option value="UNGA">United Nations General Assembly (30 delegates)</option>
+              <option value="UNHRC">United Nations Human Rights Council (30 delegates)</option>
+              <option value="WHO">World Health Organization (30 delegates)</option>
+              <option value="AIPPM">All India Political Parties Meet (40 delegates)</option>
+              <option value="CRISIS">Crisis Committee (20 delegates)</option>
+            </select>
+          </div>
+          <div class="countries-section">
+            <h3><i class="fas fa-flag"></i> Country Preferences</h3>
+            <div class="countries-grid">
+              <div class="form-group">
+                <label for="country1">First Preference</label>
+                <select id="country1" name="country1" required>
+                  <option value="">Select a country</option>
+                  <option value="USA">United States</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                  <option value="CN">China</option>
+                  <option value="RU">Russia</option>
+                  <option value="IN">India</option>
+                  <option value="BR">Brazil</option>
+                  <option value="JP">Japan</option>
+                  <option value="SA">South Africa</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="country2">Second Preference</label>
+                <select id="country2" name="country2">
+                  <option value="">Select a country</option>
+                  <option value="USA">United States</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                  <option value="CN">China</option>
+                  <option value="RU">Russia</option>
+                  <option value="IN">India</option>
+                  <option value="BR">Brazil</option>
+                  <option value="JP">Japan</option>
+                  <option value="SA">South Africa</option>
+                </select>
+              </div>
+              
+            </div>
+          </div>
+          <div class="btn-container">
+            <button type="button" class="back-btn" onclick="showSection(1)">
+  <i class="fas fa-arrow-left"></i> Back
+</button>
+            <button type="button" class="payment-btn" onclick="showSection(3)">Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Section 3: Payment -->
+        <div class="form-section" id="section3">
+          <div class="form-group full-width">
+            <h3>Review Your Details</h3>
+            <div id="summaryBox" class="summary-box"></div>
+          </div>
+          <div class="form-group full-width">
+            <label for="paymentProof"><i class="fas fa-receipt"></i> Payment Proof</label>
+            <input type="file" id="paymentProof" name="paymentProof" accept="image/*,application/pdf">
+          </div>
+          <div class="btn-container">
+            <button type="button" class="back-btn" onclick="showSection(2)"><i class="fas fa-arrow-left"></i> Back</button>
+            <button type="submit" class="payment-btn">Complete Registration & Payment <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+function validateSection(sectionNum) {
+  let valid = true;
+  let section = document.getElementById('section' + sectionNum);
+  let inputs = section.querySelectorAll('input, select');
+  inputs.forEach(function(input) {
+    if (input.hasAttribute('required') && !input.value) {
+      valid = false;
+      input.classList.add('input-error');
+    } else {
+      input.classList.remove('input-error');
+    }
+  });
+  return valid;
+}
+
+function fillSummary() {
+  const summary = `
+    <strong>Name:</strong> ${document.getElementById('fullName').value}<br>
+    <strong>School:</strong> ${document.getElementById('school').value}<br>
+    <strong>Age:</strong> ${document.getElementById('age').value}<br>
+    <strong>MUNs Attended:</strong> ${document.getElementById('muns').value}<br>
+    <strong>BD:</strong> ${document.getElementById('bd').value}
+    <strong>HC:</strong> ${document.getElementById('hc').value}
+    <strong>SM:</strong> ${document.getElementById('sm').value}
+    <strong>HM:</strong> ${document.getElementById('hm').value}
+    <strong>VM:</strong> ${document.getElementById('vm').value}<br>
+    <strong>Committee:</strong> ${document.getElementById('committee').value}<br>
+    <strong>Country 1:</strong> ${document.getElementById('country1').value}<br>
+    <strong>Country 2:</strong> ${document.getElementById('country2').value}<br>
+  `;
+  document.getElementById('summaryBox').innerHTML = summary;
+}
+
+function showSection(num) {
+  // Validate current section before moving forward
+  if (num > 1) {
+    if (!validateSection(num - 1)) {
+      alert('Please fill all required fields before proceeding.');
+      return;
+    }
+  }
+  document.getElementById('section1').classList.remove('active');
+  document.getElementById('section2').classList.remove('active');
+  document.getElementById('section3').classList.remove('active');
+  document.getElementById('section' + num).classList.add('active');
+  if (num === 3) fillSummary();
+}
+</script>
+</body>
+</html>
+
