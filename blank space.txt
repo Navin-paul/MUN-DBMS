@@ -1,0 +1,414 @@
+MUN DATABASE SQL
+
+TABLE: COUNTRIES
+No. of countries: 39
++------+--------------+-----------+----------+
+| No   | Country      | Status    | Delegate |
++------+--------------+-----------+----------+
+|    1 | USA          | Available | NULL     |
+|    2 | China        | Available | NULL     |
+|    3 | Russia       | Available | NULL     |
+|    4 | UK           | Available | NULL     |
+|    5 | France       | Available | NULL     |
+|    6 | India        | Available | NULL     |
+|    7 | Germany      | Available | NULL     |
+|    8 | Japan        | Available | NULL     |
+|    9 | Brazil       | Available | NULL     |
+|   10 | South Africa | Available | NULL     |
+|   11 | Canada       | Available | NULL     |
+|   12 | Australia    | Available | NULL     |
+|   13 | Italy        | Available | NULL     |
+|   14 | Mexico       | Available | NULL     |
+|   15 | Saudi Arabia | Available | NULL     |
+|   16 | Spain        | Available | NULL     |
+|   17 | Turkey       | Available | NULL     |
+|   18 | Egypt        | Available | NULL     |
+|   19 | Israel       | Available | NULL     |
+|   20 | Pakistan     | Available | NULL     |
+|   21 | Nigeria      | Available | NULL     |
+|   22 | South Korea  | Available | NULL     |
+|   23 | Indonesia    | Available | NULL     |
+|   24 | Argentina    | Available | NULL     |
+|   25 | Sweden       | Available | NULL     |
+|   26 | Norway       | Available | NULL     |
+|   27 | Iran         | Available | NULL     |
+|   28 | Bangladesh   | Available | NULL     |
+|   29 | Ukraine      | Available | NULL     |
+|   30 | Thailand     | Available | NULL     |
+|   31 | Netherlands  | Available | NULL     |
+|   32 | Poland       | Available | NULL     |
+|   33 | Switzerland  | Available | NULL     |
+|   34 | Malaysia     | Available | NULL     |
+|   35 | Iraq         | Available | NULL     |
+|   36 | Belgium      | Available | NULL     |
+|   37 | Greece       | Available | NULL     |
+|   38 | Philippines  | Available | NULL     |
+|   39 | Denmark      | Available | NULL     |
++------+--------------+-----------+----------+
+
+TABLE: DELEGATES
+No. of entries: 150
++-------------------------+---------------------------+------+------+-----------+-----------+-----------+------+------+------+------+------+
+| Name                    | School                    | Age  | MUNs | Committee | Country 1 | Country 2 | BD   | HC   | SM   | HM   | VM   |
++-------------------------+---------------------------+------+------+-----------+-----------+-----------+------+------+------+------+------+
+| Bina Bhargava           | PSBB                      |   16 |    3 | UNGA      | India     | Brazil    |    1 |    1 |    1 |    0 |    0 |
+| Wahab Khalsa            | Delhi Public School       |   15 |    5 | UNHRC     | Russia    | Germany   |    0 |    1 |    0 |    1 |    1 |
+| Aahana Dixit            | DAV Gopalapuram           |   14 |    1 | AIMMP     | China     | UK        |    0 |    0 |    2 |    0 |    1 |
+| Zayan Khanna            | Chinmaya Vidyalaya        |   17 |    2 | CRISIS    | Australia | France    |    0 |    0 |    1 |    1 |    0 |
+| Ekapad Lad              | Velammal Vidyalaya        |   16 |    4 | UNHRC     | Germany   | USA       |    1 |    0 |    0 |    1 |    0 |
+| Urmi Tata               | Chettinad Vidyashram      |   15 |    2 | UNGA      | Japan     | Russia    |    0 |    1 |    0 |    0 |    0 |
+| Bhavini Kanda           | National Public School    |   14 |    0 | UNHRC     | UK        | India     |    0 |    0 |    0 |    1 |    1 |
+| Ati Chaudhuri           | SBOA School & Jr. College |   17 |    7 | AIMMP     | Brazil    | Japan     |    1 |    1 |    1 |    0 |    1 |
+| Utkarsh Bail            | PSBB                      |   16 |    3 | CRISIS    | France    | Germany   |    0 |    1 |    0 |    0 |    2 |
+| Lipika Maharaj          | Hindustan Intl School     |   15 |    2 | UNGA      | China     | USA       |    2 |    0 |    0 |    0 |    0 |
+| Bakhshi Nagarajan       | The Pupil Saveetha        |   14 |    5 | AIMMP     | UK        | Australia |    0 |    1 |    1 |    1 |    0 |
+| Arya Sami               | DAV Gopalapuram           |   17 |    8 | UNHRC     | India     | Brazil    |    0 |    0 |    1 |    0 |    2 |
+| Tristan Balasubramanian | PSBB                      |   15 |    1 | CRISIS    | Japan     | Russia    |    1 |    0 |    0 |    2 |    0 |
+| Yasti Shroff            | Chettinad Vidyashram      |   16 |    3 | UNGA      | USA       | France    |    0 |    1 |    0 |    0 |    1 |
+| Zehaan Edwin            | Chinmaya Vidyalaya        |   14 |    0 | UNHRC     | Germany   | Australia |    0 |    0 |    0 |    0 |    0 |
+| Sathvik Ravel           | Hindustan Intl School     |   17 |    6 | AIMMP     | China     | India     |    2 |    1 |    0 |    1 |    1 |
+| Kalpit Gade             | Velammal Vidyalaya        |   15 |    2 | UNGA      | UK        | Brazil    |    1 |    0 |    1 |    0 |    1 |
+| Aadhya Warrior          | National Public School    |   14 |    4 | UNHRC     | Russia    | Japan     |    0 |    0 |    0 |    1 |    0 |
+| Patrick Lad             | SBOA School & Jr. College |   16 |    3 | CRISIS    | Australia | France    |    0 |    2 |    0 |    0 |    1 |
+| Faraj Kamdar            | DAV Gopalapuram           |   15 |    1 | UNGA      | China     | India     |    1 |    0 |    0 |    1 |    0 |
+| Kai Shah                | PSBB                      |   17 |    5 | AIMMP     | Germany   | UK        |    0 |    0 |    2 |    0 |    0 |
+| Mohini Bera             | Chettinad Vidyashram      |   14 |    6 | UNHRC     | Brazil    | USA       |    1 |    1 |    0 |    0 |    1 |
+| Anirudh Bobal           | Chinmaya Vidyalaya        |   15 |    2 | CRISIS    | France    | Japan     |    0 |    0 |    1 |    0 |    2 |
+| Nimrat Dash             | Delhi Public School       |   16 |    0 | UNGA      | Russia    | India     |    0 |    1 |    0 |    1 |    0 |
+| Riya Soni               | Hindustan Intl School     |   14 |    7 | AIMMP     | China     | Australia |    2 |    0 |    1 |    1 |    0 |
+| Janya Keer              | The Pupil Saveetha        |   15 |    3 | CRISIS    | Germany   | USA       |    1 |    0 |    0 |    1 |    2 |
+| Ikshita Bir             | SBOA School & Jr. College |   16 |    2 | UNGA      | UK        | India     |    0 |    1 |    1 |    0 |    1 |
+| Ranbir Gulati           | PSBB                      |   17 |    4 | AIMMP     | Japan     | China     |    0 |    0 |    0 |    0 |    0 |
+| Damini Balakrishnan     | DAV Gopalapuram           |   14 |    6 | UNHRC     | France    | Brazil    |    2 |    0 |    0 |    1 |    0 |
+| Jeremiah Ganguly        | Chinmaya Vidyalaya        |   15 |    0 | UNGA      | Australia | Germany   |    0 |    2 |    1 |    0 |    0 |
+| Finn Chokshi            | National Public School    |   16 |    1 | AIMMP     | UK        | France    |    1 |    1 |    0 |    0 |    1 |
+| Mahika Luthra           | Hindustan Intl School     |   14 |    3 | CRISIS    | USA       | Russia    |    0 |    0 |    0 |    2 |    1 |
+| Chameli Mitter          | Chettinad Vidyashram      |   17 |    5 | UNHRC     | Japan     | Brazil    |    0 |    1 |    2 |    0 |    0 |
+| Zayan Khanna            | Chinmaya Vidyalaya        |   15 |    2 | UNGA      | India     | UK        |    1 |    0 |    0 |    1 |    0 |
+| Ekapad Lad              | PSBB                      |   14 |    1 | AIMMP     | Germany   | France    |    0 |    0 |    1 |    0 |    0 |
+| Udarsh Sastry           | DAV Gopalapuram           |   16 |    3 | CRISIS    | China     | USA       |    2 |    1 |    0 |    0 |    1 |
+| Triya Chacko            | Velammal Vidyalaya        |   15 |    7 | UNGA      | Brazil    | India     |    0 |    0 |    0 |    1 |    0 |
+| Tristan Balasubramanian | The Pupil Saveetha        |   14 |    5 | UNHRC     | Russia    | Australia |    1 |    2 |    0 |    0 |    1 |
+| Xalak Devan             | SBOA School & Jr. College |   16 |    4 | AIMMP     | Germany   | UK        |    0 |    0 |    1 |    1 |    0 |
+| Bhavini Kanda           | National Public School    |   15 |    6 | CRISIS    | USA       | China     |    0 |    1 |    0 |    0 |    2 |
+| Bhavini Parekh          | PSBB                      |   17 |    2 | UNGA      | Brazil    | India     |    1 |    0 |    0 |    2 |    0 |
+| Atharv Rai              | DAV Gopalapuram           |   14 |    3 | UNHRC     | France    | Japan     |    0 |    0 |    1 |    1 |    1 |
+| Wahab Khalsa            | Hindustan Intl School     |   16 |    4 | AIMMP     | Russia    | UK        |    2 |    0 |    0 |    0 |    1 |
+| Urvashi Mohan           | Chinmaya Vidyalaya        |   15 |    0 | CRISIS    | Australia | USA       |    1 |    1 |    0 |    0 |    0 |
+| Charles Dugar           | Chettinad Vidyashram      |   14 |    2 | UNGA      | Japan     | France    |    0 |    2 |    1 |    0 |    0 |
+| Abhimanyu Khatri        | The Pupil Saveetha        |   17 |    5 | UNHRC     | India     | Germany   |    0 |    0 |    0 |    1 |    0 |
+| Anirudh Bobal           | National Public School    |   16 |    3 | AIMMP     | Brazil    | UK        |    1 |    1 |    0 |    1 |    1 |
+| Bhavini Ahluwalia       | SBOA School & Jr. College |   15 |    1 | CRISIS    | Russia    | China     |    0 |    1 |    1 |    0 |    0 |
+| Rishi Edwin             | Chinmaya Vidyalaya        |   14 |    6 | UNGA      | Australia | India     |    1 |    0 |    0 |    2 |    0 |
+| Harshil Bobal           | PSBB                      |   17 |    2 | UNHRC     | Germany   | USA       |    0 |    0 |    0 |    0 |    1 |
+| Andrew Malhotra         | Chettinad Vidyashram      |   15 |    4 | UNGA      | UK        | Russia    |    0 |    1 |    1 |    0 |    1 |
+| Yachana Gandhi          | Chinmaya Vidyalaya        |   16 |    2 | AIMMP     | China     | India     |    1 |    0 |    0 |    0 |    2 |
+| Triya Chacko            | DAV Gopalapuram           |   14 |    6 | CRISIS    | Brazil    | USA       |    0 |    0 |    2 |    0 |    1 |
+| Bhavini Parekh          | PSBB                      |   15 |    3 | UNHRC     | Japan     | France    |    1 |    1 |    0 |    1 |    0 |
+| Ishani Khanna           | The Pupil Saveetha        |   17 |    0 | UNGA      | Australia | Germany   |    0 |    1 |    0 |    0 |    0 |
+| Patrick Lad             | SBOA School & Jr. College |   16 |    1 | AIMMP     | UK        | India     |    0 |    0 |    1 |    1 |    0 |
+| Rishi Edwin             | Hindustan Intl School     |   14 |    7 | CRISIS    | France    | China     |    2 |    0 |    0 |    0 |    1 |
+| Udarsh Borde            | Delhi Public School       |   17 |    5 | UNGA      | Russia    | Brazil    |    0 |    1 |    0 |    0 |    0 |
+| Divya Sen               | Velammal Vidyalaya        |   16 |    4 | UNHRC     | Germany   | USA       |    0 |    1 |    1 |    0 |    0 |
+| Geetika Zachariah       | Chinmaya Vidyalaya        |   15 |    3 | AIMMP     | Japan     | UK        |    1 |    0 |    0 |    2 |    0 |
+| Ikshita Bir             | PSBB                      |   14 |    6 | CRISIS    | India     | China     |    1 |    0 |    1 |    0 |    1 |
+| Janya Keer              | DAV Gopalapuram           |   15 |    2 | UNGA      | France    | Australia |    0 |    0 |    1 |    1 |    0 |
+| Abhimanyu Khatri        | The Pupil Saveetha        |   16 |    5 | UNHRC     | Germany   | Brazil    |    0 |    1 |    0 |    0 |    2 |
+| Ati Chaudhuri           | SBOA School & Jr. College |   15 |    1 | AIMMP     | UK        | India     |    1 |    0 |    0 |    1 |    0 |
+| Bhavika Gole            | Chinmaya Vidyalaya        |   14 |    3 | CRISIS    | USA       | Japan     |    0 |    1 |    0 |    0 |    0 |
+| Odika Nayar             | National Public School    |   17 |    2 | UNGA      | Russia    | Australia |    0 |    0 |    0 |    0 |    1 |
+| Ojas Sarma              | PSBB                      |   15 |    7 | UNHRC     | Germany   | Brazil    |    2 |    1 |    1 |    0 |    1 |
+| Pushti Gour             | DAV Gopalapuram           |   16 |    3 | AIMMP     | UK        | France    |    1 |    0 |    0 |    1 |    0 |
+| Advay Vyas              | Chettinad Vidyashram      |   14 |    6 | CRISIS    | Japan     | China     |    0 |    1 |    1 |    0 |    0 |
+| Jackson Nagarajan       | Chinmaya Vidyalaya        |   15 |    4 | UNGA      | India     | USA       |    1 |    0 |    0 |    0 |    0 |
+| Qarin Zachariah         | Hindustan Intl School     |   17 |    1 | UNHRC     | Russia    | Australia |    0 |    2 |    0 |    1 |    0 |
+| Zehaan Edwin            | SBOA School & Jr. College |   16 |    5 | AIMMP     | France    | Brazil    |    0 |    0 |    0 |    1 |    1 |
+| Falguni Sodhi           | PSBB                      |   14 |    0 | CRISIS    | Germany   | Japan     |    0 |    0 |    0 |    0 |    0 |
+| Yashvi Sule             | The Pupil Saveetha        |   15 |    6 | UNGA      | UK        | China     |    2 |    1 |    0 |    0 |    1 |
+| Dayamai Aggarwal        | Chettinad Vidyashram      |   16 |    2 | UNHRC     | India     | France    |    1 |    0 |    1 |    0 |    1 |
+| Bhavini Kanda           | DAV Gopalapuram           |   15 |    4 | AIMMP     | UK        | Russia    |    0 |    0 |    1 |    2 |    0 |
+| Oni Saini               | PSBB                      |   14 |    2 | CRISIS    | Germany   | Brazil    |    1 |    1 |    0 |    0 |    0 |
+| Amol Ganesan            | Chinmaya Vidyalaya        |   17 |    3 | UNGA      | China     | Japan     |    0 |    0 |    1 |    0 |    1 |
+| Yashvi Lad              | Hindustan Intl School     |   15 |    6 | UNHRC     | India     | Australia |    1 |    0 |    0 |    1 |    0 |
+| Faraj Kamdar            | SBOA School & Jr. College |   16 |    1 | AIMMP     | USA       | France    |    2 |    0 |    0 |    0 |    0 |
+| Yasti Shroff            | The Pupil Saveetha        |   14 |    5 | CRISIS    | UK        | India     |    0 |    1 |    1 |    0 |    1 |
+| Divya Sen               | PSBB                      |   15 |    2 | UNGA      | Brazil    | Germany   |    0 |    0 |    1 |    0 |    0 |
+| Faraj Wagle             | Delhi Public School       |   16 |    4 | UNHRC     | Japan     | UK        |    1 |    1 |    0 |    1 |    0 |
+| Ekalinga Bhargava       | Velammal Vidyalaya        |   17 |    0 | AIMMP     | USA       | France    |    0 |    0 |    0 |    0 |    0 |
+| Yasti Bora              | Chettinad Vidyashram      |   14 |    3 | CRISIS    | India     | Brazil    |    0 |    1 |    0 |    2 |    0 |
+| Chameli Mitter          | Chinmaya Vidyalaya        |   15 |    5 | UNGA      | Germany   | Japan     |    0 |    0 |    0 |    0 |    1 |
+| Deepa Ganesh            | DAV Gopalapuram           |   16 |    2 | UNHRC     | France    | China     |    1 |    0 |    0 |    0 |    0 |
+| Vidhi Ratta             | National Public School    |   14 |    6 | AIMMP     | UK        | Russia    |    0 |    2 |    1 |    0 |    1 |
+| Ekapad Lad              | SBOA School & Jr. College |   15 |    1 | CRISIS    | Brazil    | Australia |    1 |    0 |    0 |    0 |    0 |
+| Zayan Khanna            | Hindustan Intl School     |   17 |    4 | UNGA      | India     | France    |    0 |    1 |    0 |    0 |    0 |
+| Rushil Tandon           | PSBB                      |   14 |    5 | UNHRC     | Russia    | USA       |    0 |    0 |    2 |    1 |    0 |
+| Eiravati Mahajan        | The Pupil Saveetha        |   15 |    3 | AIMMP     | China     | UK        |    2 |    1 |    0 |    0 |    0 |
+| Viraj Khalsa            | Chettinad Vidyashram      |   16 |    2 | CRISIS    | Germany   | India     |    1 |    0 |    1 |    0 |    1 |
+| Ikshita Bir             | DAV Gopalapuram           |   17 |    4 | UNGA      | Japan     | Brazil    |    0 |    1 |    0 |    1 |    0 |
+| Bhavini Ahluwalia       | Chinmaya Vidyalaya        |   15 |    0 | UNHRC     | UK        | Australia |    1 |    0 |    0 |    1 |    1 |
+| Ranbir Gulati           | Velammal Vidyalaya        |   14 |    3 | AIMMP     | France    | USA       |    1 |    0 |    1 |    0 |    0 |
+| Jackson Nagarajan       | National Public School    |   16 |    1 | CRISIS    | China     | Russia    |    0 |    1 |    0 |    0 |    1 |
+| Hritik Bhatia           | Hindustan Intl School     |   15 |    5 | UNGA      | India     | Brazil    |    0 |    0 |    0 |    2 |    1 |
+| Mohini Bera             | SBOA School & Jr. College |   17 |    6 | UNHRC     | Germany   | Japan     |    2 |    0 |    1 |    0 |    0 |
+| Sathvik Ravel           | PSBB                      |   14 |    2 | AIMMP     | UK        | France    |    0 |    1 |    0 |    0 |    0 |
+| Riya Soni               | DAV Gopalapuram           |   15 |    3 | CRISIS    | Brazil    | India     |    0 |    0 |    1 |    0 |    2 |
+| Eesha Chaudry           | Chinmaya Vidyalaya        |   17 |    2 | UNGA      | Japan     | Germany   |    1 |    1 |    0 |    1 |    0 |
+| Yashoda Bava            | The Pupil Saveetha        |   14 |    6 | UNHRC     | China     | Australia |    0 |    0 |    0 |    0 |    0 |
+| Yashvi Lad              | SBOA School & Jr. College |   15 |    5 | AIMMP     | France    | UK        |    2 |    0 |    0 |    1 |    1 |
+| Harshil Bobal           | PSBB                      |   16 |    4 | CRISIS    | USA       | Russia    |    1 |    0 |    0 |    0 |    0 |
+| Adweta Tak              | Chettinad Vidyashram      |   14 |    1 | UNGA      | India     | Japan     |    0 |    0 |    1 |    0 |    1 |
+| Oni Saini               | Hindustan Intl School     |   15 |    6 | UNHRC     | Brazil    | Germany   |    0 |    2 |    1 |    0 |    0 |
+| Yashvi Sule             | DAV Gopalapuram           |   17 |    0 | AIMMP     | UK        | France    |    0 |    0 |    0 |    0 |    0 |
+| Triya Chacko            | Chinmaya Vidyalaya        |   16 |    3 | CRISIS    | China     | India     |    1 |    1 |    0 |    1 |    0 |
+| Mahika Luthra           | PSBB                      |   15 |    2 | UNGA      | USA       | Australia |    0 |    0 |    0 |    0 |    1 |
+| Gavin Thaman            | National Public School    |   14 |    5 | UNHRC     | Russia    | Germany   |    0 |    0 |    2 |    0 |    1 |
+| Pushti Gour             | SBOA School & Jr. College |   17 |    4 | AIMMP     | UK        | Japan     |    1 |    0 |    0 |    1 |    0 |
+| Zehaan Edwin            | Hindustan Intl School     |   15 |    1 | CRISIS    | France    | China     |    0 |    0 |    0 |    0 |    0 |
+| Ati Chaudhuri           | The Pupil Saveetha        |   14 |    3 | UNGA      | India     | Brazil    |    2 |    0 |    1 |    0 |    0 |
+| Deepa Ganesh            | Chinmaya Vidyalaya        |   16 |    2 | UNHRC     | USA       | Germany   |    0 |    1 |    0 |    1 |    1 |
+| Manya Pillay            | Chettinad Vidyashram      |   15 |    4 | AIMMP     | Russia    | UK        |    1 |    0 |    1 |    0 |    0 |
+| Andrew Malhotra         | PSBB                      |   14 |    3 | CRISIS    | France    | India     |    0 |    0 |    0 |    0 |    1 |
+| Charles Dugar           | DAV Gopalapuram           |   17 |    2 | UNGA      | Brazil    | Japan     |    1 |    1 |    0 |    1 |    0 |
+| Ojas Sarma              | Hindustan Intl School     |   16 |    0 | UNHRC     | China     | Australia |    0 |    0 |    0 |    0 |    0 |
+| Amol Ganesan            | SBOA School & Jr. College |   15 |    5 | AIMMP     | Germany   | France    |    2 |    0 |    0 |    0 |    1 |
+| Udarsh Borde            | PSBB                      |   14 |    1 | CRISIS    | UK        | Russia    |    0 |    0 |    1 |    0 |    1 |
+| Damini Balakrishnan     | Chinmaya Vidyalaya        |   17 |    4 | UNGA      | India     | USA       |    1 |    1 |    0 |    0 |    0 |
+| Jairaj Chowdhury        | Chettinad Vidyashram      |   16 |    2 | UNHRC     | Japan     | Brazil    |    0 |    1 |    0 |    0 |    1 |
+| Arya Sami               | The Pupil Saveetha        |   15 |    5 | AIMMP     | UK        | India     |    1 |    0 |    1 |    0 |    0 |
+| Fitan Maharaj           | DAV Gopalapuram           |   14 |    6 | CRISIS    | France    | Australia |    0 |    0 |    2 |    0 |    1 |
+| Bakhshi Nagarajan       | PSBB                      |   16 |    2 | UNGA      | Germany   | China     |    0 |    1 |    0 |    1 |    0 |
+| Wishi Kamdar            | Chinmaya Vidyalaya        |   15 |    3 | UNHRC     | India     | USA       |    1 |    0 |    1 |    0 |    1 |
+| Eesha Chaudry           | DAV Gopalapuram           |   14 |    5 | AIMMP     | Brazil    | UK        |    0 |    2 |    0 |    0 |    0 |
+| Atharv Rai              | The Pupil Saveetha        |   17 |    4 | CRISIS    | France    | Australia |    1 |    0 |    0 |    0 |    0 |
+| Oni Saini               | SBOA School & Jr. College |   16 |    1 | UNGA      | UK        | Japan     |    0 |    0 |    0 |    0 |    0 |
+| Udarsh Sastry           | National Public School    |   15 |    6 | UNHRC     | Russia    | Germany   |    0 |    0 |    1 |    0 |    1 |
+| Abhimanyu Khatri        | Hindustan Intl School     |   14 |    3 | AIMMP     | China     | Brazil    |    1 |    1 |    0 |    1 |    0 |
+| Rishi Edwin             | PSBB                      |   17 |    2 | CRISIS    | India     | UK        |    0 |    1 |    0 |    0 |    0 |
+| Aahana Dixit            | DAV Gopalapuram           |   15 |    0 | UNGA      | Germany   | USA       |    0 |    0 |    0 |    1 |    0 |
+| Chameli Mitter          | Chettinad Vidyashram      |   14 |    1 | UNHRC     | France    | Australia |    1 |    0 |    0 |    0 |    2 |
+| Udarsh Borde            | Chinmaya Vidyalaya        |   16 |    5 | AIMMP     | Japan     | Russia    |    0 |    1 |    1 |    0 |    0 |
+| Triya Chacko            | SBOA School & Jr. College |   15 |    2 | CRISIS    | Brazil    | India     |    2 |    0 |    0 |    0 |    0 |
+| Andrew Malhotra         | The Pupil Saveetha        |   14 |    4 | UNGA      | UK        | France    |    1 |    0 |    1 |    1 |    0 |
+| Yashvi Lad              | Chinmaya Vidyalaya        |   17 |    2 | UNHRC     | USA       | China     |    0 |    1 |    0 |    0 |    1 |
+| Xalak Devan             | National Public School    |   15 |    3 | AIMMP     | India     | Germany   |    0 |    1 |    1 |    0 |    0 |
+| Dayita Gaba             | Chettinad Vidyashram      |   14 |    6 | CRISIS    | France    | UK        |    1 |    0 |    0 |    1 |    1 |
+| Yasti Bora              | DAV Gopalapuram           |   16 |    3 | UNGA      | Russia    | Brazil    |    0 |    0 |    0 |    0 |    0 |
+| Urmi Tata               | PSBB                      |   15 |    4 | UNHRC     | China     | Japan     |    1 |    1 |    0 |    1 |    0 |
+| Geetika Zachariah       | Hindustan Intl School     |   14 |    0 | AIMMP     | India     | USA       |    0 |    0 |    1 |    0 |    0 |
+| Harshil Bobal           | SBOA School & Jr. College |   17 |    2 | CRISIS    | Brazil    | France    |    0 |    0 |    0 |    2 |    1 |
+| Tristan Balasubramanian | The Pupil Saveetha        |   15 |    6 | UNGA      | UK        | Germany   |    0 |    1 |    1 |    0 |    0 |
+| Bhavini Kanda           | Chinmaya Vidyalaya        |   16 |    3 | UNHRC     | Australia | China     |    1 |    0 |    0 |    1 |    1 |
+| Ekalinga Bhargava       | DAV Gopalapuram           |   14 |    5 | AIMMP     | France    | UK        |    0 |    2 |    0 |    0 |    0 |
+| Ojas Sarma              | PSBB                      |   17 |    4 | CRISIS    | USA       | Russia    |    1 |    0 |    0 |    1 |    0 |
+| Gavin Thaman            | Chinmaya Vidyalaya        |   15 |    1 | UNGA      | Germany   | India     |    0 |    0 |    0 |    0 |    2 |
++-------------------------+---------------------------+------+------+-----------+-----------+-----------+------+------+------+------+------+
+
+POINTS SYSTEM (PYTHON):
+
+BD: 9
+HC: 5
+SM: 3
+HM: 2
+VM: 1
+Number of MUNs: 1
+
+SOURCE CODE:
+
+import mysql.connector
+
+# Points mapping for awards
+award_points = {
+    'BD': 9,
+    'HC': 5,
+    'SM': 3,
+    'HM': 2,
+    'VM': 1
+}
+
+# Connect to the MySQL database
+conn = mysql.connector.connect(
+    host='localhost',
+    user='root',
+    password='password',
+    database='updproj'
+)
+cursor = conn.cursor(dictionary=True)
+
+# Fetch all delegates
+cursor.execute("SELECT * FROM delegates")
+delegates = cursor.fetchall()
+
+# Calculate points and prepare ranked list
+ranked = []
+for delegate in delegates:
+    award = delegate.get('Experience', '').strip()
+    num_muns = int(delegate.get('MUNs', 0))  # UPDATED to use 'MUNs' column
+    points = award_points.get(award, 0) + num_muns
+    ranked.append((points, delegate))
+
+# Sort by points descending
+ranked.sort(key=lambda x: x[0], reverse=True)
+
+# Print ranked delegates with points
+print(f"{'Rank':<5} {'Name':<20} {'Points':<6} {'Award':<5} {'School':<20} {'Committee':<15} {'Pref 1':<15} {'Pref 2':<15}")
+print("-" * 115)
+for idx, (points, d) in enumerate(ranked, start=1):
+    print(f"{idx:<5} {d.get('Name',''):<20} {points:<6} {d.get('Experience',''):<5} {d.get('School',''):<20} {d.get('Committee',''):<15} {d.get('Country_Pref_1',''):<15} {d.get('Country_Pref_2',''):<15}")
+
+cursor.close()
+conn.close()
+
+OUTPUT:
+
+Rank  Name                 Points Award School               Committee       Pref 1          Pref 2
+-------------------------------------------------------------------------------------------------------------------
+1     Arya Sami            8            DAV Gopalapuram      UNHRC
+2     Ati Chaudhuri        7            SBOA School & Jr. College AIMMP
+3     Riya Soni            7            Hindustan Intl School AIMMP
+4     Triya Chacko         7            Velammal Vidyalaya   UNGA
+5     Rishi Edwin          7            Hindustan Intl School CRISIS
+6     Ojas Sarma           7            PSBB                 UNHRC
+7     Sathvik Ravel        6            Hindustan Intl School AIMMP
+8     Mohini Bera          6            Chettinad Vidyashram UNHRC
+9     Damini Balakrishnan  6            DAV Gopalapuram      UNHRC
+10    Bhavini Kanda        6            National Public School CRISIS
+11    Rishi Edwin          6            Chinmaya Vidyalaya   UNGA
+12    Triya Chacko         6            DAV Gopalapuram      CRISIS
+13    Ikshita Bir          6            PSBB                 CRISIS
+14    Advay Vyas           6            Chettinad Vidyashram CRISIS
+15    Yashvi Sule          6            The Pupil Saveetha   UNGA
+16    Yashvi Lad           6            Hindustan Intl School UNHRC
+17    Vidhi Ratta          6            National Public School AIMMP
+18    Mohini Bera          6            SBOA School & Jr. College UNHRC
+19    Yashoda Bava         6            The Pupil Saveetha   UNHRC
+20    Oni Saini            6            Hindustan Intl School UNHRC
+21    Fitan Maharaj        6            DAV Gopalapuram      CRISIS
+22    Udarsh Sastry        6            National Public School UNHRC
+23    Dayita Gaba          6            Chettinad Vidyashram CRISIS
+24    Tristan Balasubramanian 6            The Pupil Saveetha   UNGA
+25    Wahab Khalsa         5            Delhi Public School  UNHRC
+26    Bakhshi Nagarajan    5            The Pupil Saveetha   AIMMP
+27    Kai Shah             5            PSBB                 AIMMP
+28    Chameli Mitter       5            Chettinad Vidyashram UNHRC
+29    Tristan Balasubramanian 5            The Pupil Saveetha   UNHRC
+30    Abhimanyu Khatri     5            The Pupil Saveetha   UNHRC
+31    Udarsh Borde         5            Delhi Public School  UNGA
+32    Abhimanyu Khatri     5            The Pupil Saveetha   UNHRC
+33    Zehaan Edwin         5            SBOA School & Jr. College AIMMP
+34    Yasti Shroff         5            The Pupil Saveetha   CRISIS
+35    Chameli Mitter       5            Chinmaya Vidyalaya   UNGA
+36    Rushil Tandon        5            PSBB                 UNHRC
+37    Hritik Bhatia        5            Hindustan Intl School UNGA
+38    Yashvi Lad           5            SBOA School & Jr. College AIMMP
+39    Gavin Thaman         5            National Public School UNHRC
+40    Amol Ganesan         5            SBOA School & Jr. College AIMMP
+41    Arya Sami            5            The Pupil Saveetha   AIMMP
+42    Eesha Chaudry        5            DAV Gopalapuram      AIMMP
+43    Udarsh Borde         5            Chinmaya Vidyalaya   AIMMP
+44    Ekalinga Bhargava    5            DAV Gopalapuram      AIMMP
+45    Ekapad Lad           4            Velammal Vidyalaya   UNHRC
+46    Aadhya Warrior       4            National Public School UNHRC
+47    Ranbir Gulati        4            PSBB                 AIMMP
+48    Xalak Devan          4            SBOA School & Jr. College AIMMP
+49    Wahab Khalsa         4            Hindustan Intl School AIMMP
+50    Andrew Malhotra      4            Chettinad Vidyashram UNGA
+51    Divya Sen            4            Velammal Vidyalaya   UNHRC
+52    Jackson Nagarajan    4            Chinmaya Vidyalaya   UNGA
+53    Bhavini Kanda        4            DAV Gopalapuram      AIMMP
+54    Faraj Wagle          4            Delhi Public School  UNHRC
+55    Zayan Khanna         4            Hindustan Intl School UNGA
+56    Ikshita Bir          4            DAV Gopalapuram      UNGA
+57    Harshil Bobal        4            PSBB                 CRISIS
+58    Pushti Gour          4            SBOA School & Jr. College AIMMP
+59    Manya Pillay         4            Chettinad Vidyashram AIMMP
+60    Damini Balakrishnan  4            Chinmaya Vidyalaya   UNGA
+61    Atharv Rai           4            The Pupil Saveetha   CRISIS
+62    Andrew Malhotra      4            The Pupil Saveetha   UNGA
+63    Urmi Tata            4            PSBB                 UNHRC
+64    Ojas Sarma           4            PSBB                 CRISIS
+65    Bina Bhargava        3            PSBB                 UNGA
+66    Utkarsh Bail         3            PSBB                 CRISIS
+67    Yasti Shroff         3            Chettinad Vidyashram UNGA
+68    Patrick Lad          3            SBOA School & Jr. College CRISIS
+69    Janya Keer           3            The Pupil Saveetha   CRISIS
+70    Mahika Luthra        3            Hindustan Intl School CRISIS
+71    Udarsh Sastry        3            DAV Gopalapuram      CRISIS
+72    Atharv Rai           3            DAV Gopalapuram      UNHRC
+73    Anirudh Bobal        3            National Public School AIMMP
+74    Bhavini Parekh       3            PSBB                 UNHRC
+75    Geetika Zachariah    3            Chinmaya Vidyalaya   AIMMP
+76    Bhavika Gole         3            Chinmaya Vidyalaya   CRISIS
+77    Pushti Gour          3            DAV Gopalapuram      AIMMP
+78    Amol Ganesan         3            Chinmaya Vidyalaya   UNGA
+79    Yasti Bora           3            Chettinad Vidyashram CRISIS
+80    Eiravati Mahajan     3            The Pupil Saveetha   AIMMP
+81    Ranbir Gulati        3            Velammal Vidyalaya   AIMMP
+82    Riya Soni            3            DAV Gopalapuram      CRISIS
+83    Triya Chacko         3            Chinmaya Vidyalaya   CRISIS
+84    Ati Chaudhuri        3            The Pupil Saveetha   UNGA
+85    Andrew Malhotra      3            PSBB                 CRISIS
+86    Wishi Kamdar         3            Chinmaya Vidyalaya   UNHRC
+87    Abhimanyu Khatri     3            Hindustan Intl School AIMMP
+88    Xalak Devan          3            National Public School AIMMP
+89    Yasti Bora           3            DAV Gopalapuram      UNGA
+90    Bhavini Kanda        3            Chinmaya Vidyalaya   UNHRC
+91    Zayan Khanna         2            Chinmaya Vidyalaya   CRISIS
+92    Urmi Tata            2            Chettinad Vidyashram UNGA
+93    Lipika Maharaj       2            Hindustan Intl School UNGA
+94    Kalpit Gade          2            Velammal Vidyalaya   UNGA
+95    Anirudh Bobal        2            Chinmaya Vidyalaya   CRISIS
+96    Ikshita Bir          2            SBOA School & Jr. College UNGA
+97    Zayan Khanna         2            Chinmaya Vidyalaya   UNGA
+98    Bhavini Parekh       2            PSBB                 UNGA
+99    Charles Dugar        2            Chettinad Vidyashram UNGA
+100   Harshil Bobal        2            PSBB                 UNHRC
+101   Yachana Gandhi       2            Chinmaya Vidyalaya   AIMMP
+102   Janya Keer           2            DAV Gopalapuram      UNGA
+103   Odika Nayar          2            National Public School UNGA
+104   Dayamai Aggarwal     2            Chettinad Vidyashram UNHRC
+105   Oni Saini            2            PSBB                 CRISIS
+106   Divya Sen            2            PSBB                 UNGA
+107   Deepa Ganesh         2            DAV Gopalapuram      UNHRC
+108   Viraj Khalsa         2            Chettinad Vidyashram CRISIS
+109   Sathvik Ravel        2            PSBB                 AIMMP
+110   Eesha Chaudry        2            Chinmaya Vidyalaya   UNGA
+111   Mahika Luthra        2            PSBB                 UNGA
+112   Deepa Ganesh         2            Chinmaya Vidyalaya   UNHRC
+113   Charles Dugar        2            DAV Gopalapuram      UNGA
+114   Jairaj Chowdhury     2            Chettinad Vidyashram UNHRC
+115   Bakhshi Nagarajan    2            PSBB                 UNGA
+116   Rishi Edwin          2            PSBB                 CRISIS
+117   Triya Chacko         2            SBOA School & Jr. College CRISIS
+118   Yashvi Lad           2            Chinmaya Vidyalaya   UNHRC
+119   Harshil Bobal        2            SBOA School & Jr. College CRISIS
+120   Aahana Dixit         1            DAV Gopalapuram      AIMMP
+121   Tristan Balasubramanian 1            PSBB                 CRISIS
+122   Faraj Kamdar         1            DAV Gopalapuram      UNGA
+123   Finn Chokshi         1            National Public School AIMMP
+124   Ekapad Lad           1            PSBB                 AIMMP
+125   Bhavini Ahluwalia    1            SBOA School & Jr. College CRISIS
+126   Patrick Lad          1            SBOA School & Jr. College AIMMP
+127   Ati Chaudhuri        1            SBOA School & Jr. College AIMMP
+128   Qarin Zachariah      1            Hindustan Intl School UNHRC
+129   Faraj Kamdar         1            SBOA School & Jr. College AIMMP
+130   Ekapad Lad           1            SBOA School & Jr. College CRISIS
+131   Jackson Nagarajan    1            National Public School CRISIS
+132   Adweta Tak           1            Chettinad Vidyashram UNGA
+133   Zehaan Edwin         1            Hindustan Intl School CRISIS
+134   Udarsh Borde         1            PSBB                 CRISIS
+135   Oni Saini            1            SBOA School & Jr. College UNGA
+136   Chameli Mitter       1            Chettinad Vidyashram UNHRC
+137   Gavin Thaman         1            Chinmaya Vidyalaya   UNGA
+138   Bhavini Kanda        0            National Public School UNHRC
+139   Zehaan Edwin         0            Chinmaya Vidyalaya   UNHRC
+140   Nimrat Dash          0            Delhi Public School  UNGA
+141   Jeremiah Ganguly     0            Chinmaya Vidyalaya   UNGA
+142   Urvashi Mohan        0            Chinmaya Vidyalaya   CRISIS
+143   Ishani Khanna        0            The Pupil Saveetha   UNGA
+144   Falguni Sodhi        0            PSBB                 CRISIS
+145   Ekalinga Bhargava    0            Velammal Vidyalaya   AIMMP
+146   Bhavini Ahluwalia    0            Chinmaya Vidyalaya   UNHRC
+147   Yashvi Sule          0            DAV Gopalapuram      AIMMP
+148   Ojas Sarma           0            Hindustan Intl School UNHRC
+149   Aahana Dixit         0            DAV Gopalapuram      UNGA
+150   Geetika Zachariah    0            Hindustan Intl School AIMMP
