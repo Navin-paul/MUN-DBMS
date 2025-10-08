@@ -1853,136 +1853,139 @@
         </section>
 
         <!-- Payment Page -->
-<section class="page" id="paymentPage">
-    <section class="hero">
-        <h1>Complete <span>Registration</span></h1>
-        <p>Finalize your MUN Portal conference registration with secure payment</p>
-    </section>
-    
-    <div class="form-container">
-        <div class="form-header">
-            <h2>Payment Details</h2>
-            <p>Complete your registration by making the payment</p>
-        </div>
-        
-        <div class="payment-info">
-            <h3>Registration Details</h3>
-            <div class="info-grid">
-                <div class="info-item">
-                    <span class="info-label">Delegate Name</span>
-                    <span class="info-value" id="delegateName"></span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Committee</span>
-                    <span class="info-value" id="delegateCommittee"></span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Country</span>
-                    <span class="info-value" id="delegateCountry"></span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Registration ID</span>
-                    <span class="info-value" id="registrationId"></span>
-                </div>
-            </div>
+        <section class="page" id="paymentPage">
+            <section class="hero">
+                <h1>Complete <span>Registration</span></h1>
+                <p>Finalize your MUN Portal conference registration with secure payment</p>
+            </section>
             
-            <div class="payment-amount">
-                <div class="amount-label">Total Amount Due</div>
-                <div class="amount-value">₹2,500</div>
-            </div>
-        </div>
-        
-        <div class="payment-method">
-            <div class="method-header">
-                <div class="method-icon">
-                    <i class="fab fa-google-pay"></i>
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Payment Details</h2>
+                    <p>Complete your registration by making the payment</p>
                 </div>
-                <div class="method-title">Google Pay</div>
+                
+                <div class="payment-info">
+                    <h3>Registration Details</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Delegate Name</span>
+                            <span class="info-value" id="delegateName"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Committee</span>
+                            <span class="info-value" id="delegateCommittee"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Country</span>
+                            <span class="info-value" id="delegateCountry"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Registration ID</span>
+                            <span class="info-value" id="registrationId"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-amount">
+                        <div class="amount-label">Total Amount Due</div>
+                        <div class="amount-value">₹2,500</div>
+                    </div>
+                </div>
+                
+                <div class="payment-method">
+                    <div class="method-header">
+                        <div class="method-icon">
+                            <i class="fab fa-google-pay"></i>
+                        </div>
+                        <div class="method-title">Google Pay</div>
+                    </div>
+                    
+                    <div class="method-info">
+                        <p class="method-desc">Please send the payment to the following Google Pay ID:</p>
+                        
+                        <div class="gpay-id">osamabinladen@okaxis</div>
+                        
+                        <p class="method-desc">After completing the payment, enter your transaction ID below.</p>
+                        
+                        <div class="form-group">
+                            <label for="transactionId">Transaction ID:</label>
+                            <input type="text" id="transactionId" name="transactionId" required placeholder="Enter your transaction ID">
+                        </div>
+                        <div class="upload-section">
+                            <label class="upload-label">
+                                <i class="fas fa-receipt"></i> Payment Screenshot
+                            </label>
+                            <div class="upload-box" id="uploadBox">
+                                <div class="upload-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <div class="upload-text">Upload Payment Screenshot</div>
+                                <div class="upload-hint">Click or drag & drop your payment confirmation screenshot</div>
+                                <input type="file" id="fileInput" class="file-input" accept="image/*">
+                                <div class="file-name" id="fileName">No file chosen</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payment Note Section -->
+                <div class="payment-note">
+                    <i class="fas fa-exclamation-circle note-icon"></i>
+                    Please complete the payment and upload the screenshot for verification. Your registration will be confirmed within 24 hours.
+                </div>
+
+                <div class="btn-container">
+                    <button class="back-btn" id="backToRegister"><i class="fas fa-arrow-left"></i> Back to Registration</button>
+                    <button class="payment-btn" id="submitPayment">Submit Payment <i class="fas fa-check"></i></button>
+                </div>
             </div>
+        </section>
+
+        <!-- Confirmation Page -->
+        <section class="page" id="confirmationPage">
+            <section class="hero">
+                <h1>Registration <span>Confirmed</span></h1>
+                <p>Your MUN Portal conference registration is now complete</p>
+            </section>
             
-            <div class="method-info">
-                <p class="method-desc">Please send the payment to the following Google Pay ID:</p>
-                
-                <div class="gpay-id">osamabinladen@okaxis</div>
-                
-                <p class="method-desc">After completing the payment, enter your transaction ID below.</p>
-                
-                <div class="form-group">
-                    <label for="transactionId">Transaction ID:</label>
-                    <input type="text" id="transactionId" name="transactionId" required placeholder="Enter your transaction ID">
+            <div class="confirmation-container">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="upload-section">
-    <label class="upload-label">
-        <i class="fas fa-receipt"></i> Payment Screenshot
-    </label>
-    <div class="upload-box" id="uploadBox">
-        <div class="upload-icon">
-            <i class="fas fa-cloud-upload-alt"></i>
-        </div>
-        <div class="upload-text">Upload Payment Screenshot</div>
-        <div class="upload-hint">Click or drag & drop your payment confirmation screenshot</div>
-        <input type="file" id="fileInput" class="file-input" accept="image/*">
-        <div class="file-name" id="fileName">No file chosen</div>
-    </div>
-</div>
+                <div class="confirmation-header">
+                    <h2>Thank You for Registering!</h2>
+                    <p>Your registration has been confirmed successfully.</p>
+                </div>
+                
+                <div class="confirmation-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Registration ID:</div>
+                        <div class="detail-value" id="confirmRegId"></div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Delegate Name:</div>
+                        <div class="detail-value" id="confirmName"></div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Committee:</div>
+                        <div class="detail-value" id="confirmCommittee"></div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Country:</div>
+                        <div class="detail-value" id="confirmCountry"></div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Transaction ID:</div>
+                        <div class="detail-value" id="confirmTxId"></div>
+                    </div>
+                </div>
+                
+                <div class="confirmation-actions">
+                    <button class="back-btn" id="confirmBackToHome"><i class="fas fa-home"></i> Back to Home</button>
+                    <button class="payment-btn" id="downloadBadge"><i class="fas fa-download"></i> Download Delegate Badge</button>
+                </div>
             </div>
-        </div>
-        
-        <!-- ADD THIS PAYMENT NOTE SECTION -->
-<div class="payment-note">
-    <i class="fas fa-exclamation-circle note-icon"></i>
-    Please complete the payment and upload the screenshot for verification. Your registration will be confirmed within 24 hours.
-</div>
-
-<div class="btn-container">
-    <button class="back-btn" id="backToRegister"><i class="fas fa-arrow-left"></i> Back to Registration</button>
-    <button class="payment-btn" id="submitPayment">Submit Payment <i class="fas fa-check"></i></button>
-</div>
-    </div>
-</section>
-
-<!-- Confirmation Page -->
-<section class="page" id="confirmationPage">
-    <section class="hero">
-        <h1>Registration <span>Confirmed</span></h1>
-        <p>Your MUN Portal conference registration is now complete</p>
-    </section>
-    
-    <div class="form-container">
-        <div class="form-header">
-            <h2>Thank You for Registering!</h2>
-            <p>Your registration has been confirmed successfully.</p>
-        </div>
-        
-        <div class="confirmation-details">
-            <div class="detail-item">
-                <div class="detail-label">Registration ID:</div>
-                <div class="detail-value" id="confirmRegId"></div>
-            </div>
-            <div class="detail-item">
-                <div class="detail-label">Delegate Name:</div>
-                <div class="detail-value" id="confirmName"></div>
-            </div>
-            <div class="detail-item">
-                <div class="detail-label">Committee:</div>
-                <div class="detail-value" id="confirmCommittee"></div>
-            </div>
-            <div class="detail-item">
-                <div class="detail-label">Country:</div>
-                <div class="detail-value" id="confirmCountry"></div>
-            </div>
-            <div class="detail-item">
-                <div class="detail-label">Transaction ID:</div>
-                <div class="detail-value" id="confirmTxId"></div>
-            </div>
-        </div>
-        
-        <div class="btn-container">
-            <button class="back-btn" id="confirmBackToHome"><i class="fas fa-home"></i> Back to Home</button>
-            <button class="payment-btn" id="downloadBadge"><i class="fas fa-download"></i> Download Delegate Badge</button>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Committees & Agenda Page -->
         <section class="page committees-page" id="committeesPage">
@@ -2392,7 +2395,6 @@
                 footerResources: document.getElementById('footerResources'),
                 footerAbout: document.getElementById('footerAbout'),
                 backToHome: document.getElementById('backToHome'),
-                paymentBtn: document.getElementById('paymentBtn'),
                 backToRegister: document.getElementById('backToRegister'),
                 submitPayment: document.getElementById('submitPayment'),
                 confirmBackToHome: document.getElementById('confirmBackToHome'),
@@ -2420,53 +2422,52 @@
             }
             
             // ==================== REGISTRATION FORM ====================
-// Add this validation function RIGHT BEFORE the form submission
-function validateForm(formData) {
-    const email = formData.email;
-    const phone = formData.phone;
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return false;
-    }
-    
-    // Phone validation (if provided)
-    if (phone && !/^\d{10}$/.test(phone)) {
-        alert('Please enter a valid 10-digit phone number');
-        return false;
-    }
-    
-    return true;
-}
+            function validateForm(formData) {
+                const email = formData.email;
+                const phone = formData.phone;
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return false;
+                }
+                
+                // Phone validation (if provided)
+                if (phone && !/^\d{10}$/.test(phone)) {
+                    alert('Please enter a valid 10-digit phone number');
+                    return false;
+                }
+                
+                return true;
+            }
 
-document.getElementById('munRegistrationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        fullName: document.getElementById('fullName').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        school: document.getElementById('school').value,
-        experience: document.getElementById('experience').value,
-        country1: document.getElementById('country1').value,
-        country2: document.getElementById('country2').value,
-        country3: document.getElementById('country3').value,
-        committee: document.getElementById('committee').value
-    };
-    
-    // === ADD THIS VALIDATION CHECK ===
-    if (!validateForm(formData)) {
-        return; // Stop if validation fails
-    }
-    
-    // Validate required fields
-    if (!formData.fullName || !formData.email || !formData.school || !formData.experience || !formData.country1 || !formData.committee) {
-        alert('Please fill in all required fields.');
-        return;
-    }
+            document.getElementById('munRegistrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    fullName: document.getElementById('fullName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    school: document.getElementById('school').value,
+                    experience: document.getElementById('experience').value,
+                    country1: document.getElementById('country1').value,
+                    country2: document.getElementById('country2').value,
+                    country3: document.getElementById('country3').value,
+                    committee: document.getElementById('committee').value
+                };
+                
+                // Validate form
+                if (!validateForm(formData)) {
+                    return; // Stop if validation fails
+                }
+                
+                // Validate required fields
+                if (!formData.fullName || !formData.email || !formData.school || !formData.experience || !formData.country1 || !formData.committee) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
                 
                 // Store registration data in localStorage
                 localStorage.setItem('registrationData', JSON.stringify(formData));
@@ -2483,31 +2484,31 @@ document.getElementById('munRegistrationForm').addEventListener('submit', functi
             });
 
             // ==================== PAYMENT HANDLING ====================
-document.getElementById('submitPayment').addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const transactionId = document.getElementById('transactionId').value;
-    const fileInput = document.getElementById('fileInput');
-    
-    if (!transactionId) {
-        alert('Please enter your transaction ID');
-        return;
-    }
-    
-    if (!fileInput.files[0]) {
-        alert('Please upload payment screenshot');
-        return;
-    }
+            document.getElementById('submitPayment').addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const transactionId = document.getElementById('transactionId').value;
+                const fileInput = document.getElementById('fileInput');
+                
+                if (!transactionId) {
+                    alert('Please enter your transaction ID');
+                    return;
+                }
+                
+                if (!fileInput.files[0]) {
+                    alert('Please upload payment screenshot');
+                    return;
+                }
 
-    // Store the entered transaction ID
-    localStorage.setItem('transactionId', transactionId);
-    
-    // Update confirmation page with actual data
-    updateConfirmationDetails();
-    
-    // Navigate to confirmation page
-    showPage('confirmation');
-});
+                // Store the entered transaction ID
+                localStorage.setItem('transactionId', transactionId);
+                
+                // Update confirmation page with actual data
+                updateConfirmationDetails();
+                
+                // Navigate to confirmation page
+                showPage('confirmation');
+            });
 
             // ==================== UPDATE UI FUNCTIONS ====================
             function updatePaymentDetails() {
@@ -2530,7 +2531,6 @@ document.getElementById('submitPayment').addEventListener('click', function(e) {
                 document.getElementById('confirmCommittee').textContent = registrationData.committee || 'Not provided';
                 document.getElementById('confirmCountry').textContent = registrationData.country1 || 'Not provided';
                 document.getElementById('confirmTxId').textContent = transactionId || 'Not provided';
-                document.getElementById('confirmDate').textContent = new Date().toLocaleString();
             }
 
             // ==================== FILE UPLOAD HANDLING ====================
@@ -2854,164 +2854,163 @@ document.getElementById('submitPayment').addEventListener('click', function(e) {
                 const resourceSections = document.querySelectorAll('#resourcesPage .resource-section');
                 
                 // Committee resources data
-const committeeResources = {
-    unga: {
-        title: "UNGA Preparation Resources",
-        description: "Essential materials and guides for delegates participating in the United Nations General Assembly",
-        resources: [
-            {
-                title: "Research Guides",
-                items: [
-                    {name: "UN Charter and General Assembly Procedures", desc: "Comprehensive guide to UNGA rules and procedures", link: "https://www.un.org/en/about-us/un-charter"},
-                    {name: "Security Council Reform: Historical Context", desc: "Analysis of past reform attempts and current proposals", link: "https://www.securitycouncilreport.org/un-security-council-working-methods/reform-of-the-security-council.php"},
-                    {name: "Climate Migration: Global Trends and Solutions", desc: "Research on displacement patterns and policy options", link: "https://www.iom.int/migration-and-climate-change"},
-                    {name: "Cybersecurity in International Relations", desc: "Framework for understanding digital governance challenges", link: "https://www.un.org/disarmament/cybersecurity/"}
-                ]
-            },
-            {
-                title: "Sample Documents",
-                items: [
-                    {name: "Position Paper Template", desc: "Structured template for creating your position paper", link: "https://bestdelegate.com/sample-position-paper/"},
-                    {name: "Sample Resolution on Climate Refugees", desc: "Example of a well-structured resolution document", link: "https://www.un.org/en/model-united-nations/resolutions"},
-                    {name: "Draft Working Paper on Digital Governance", desc: "Collaborative document for committee discussions", link: "https://mun.bar/wp-content/uploads/2019/09/Sample-Working-Paper.pdf"}
-                ]
-            },
-            {
-                title: "Expert Talks",
-                items: [
-                    {name: "UN Reform: Challenges and Opportunities", desc: "Keynote by former UN Ambassador", link: "https://www.youtube.com/watch?v=9OJ7UGrG1g8"},
-                    {name: "The Future of Global Digital Policy", desc: "Panel discussion with cybersecurity experts", link: "https://www.youtube.com/watch?v=GinF7Q34aQE"},
-                    {name: "Climate Migration: Legal Frameworks", desc: "Analysis of international law on displacement", link: "https://www.youtube.com/watch?v=4bqyYQdT4fU"}
-                ]
-            }
-        ]
-    },
-    unhrc: {
-        title: "UNHRC Preparation Resources",
-        description: "Resources for delegates participating in the Human Rights Council",
-        resources: [
-            {
-                title: "Research Guides",
-                items: [
-                    {name: "International Human Rights Law Primer", desc: "Introduction to key human rights frameworks", link: "https://www.ohchr.org/en/instruments-and-mechanisms/international-human-rights-law"},
-                    {name: "Protecting Human Rights Defenders", desc: "Strategies for safeguarding activists globally", link: "https://www.ohchr.org/en/special-procedures/sr-human-rights-defenders"},
-                    {name: "Digital Rights and Freedom of Expression", desc: "Balancing online freedoms and responsibilities", link: "https://www.article19.org/resources/digital-rights/"},
-                    {name: "Indigenous Rights: Global Perspectives", desc: "Comparative study of indigenous protections", link: "https://www.un.org/development/desa/indigenouspeoples/"}
-                ]
-            },
-            {
-                title: "Sample Documents",
-                items: [
-                    {name: "Resolution Template for Human Rights Issues", desc: "Structured template for drafting resolutions", link: "https://www.amnesty.org/en/documents/pol30/001/1996/en/"},
-                    {name: "Case Study Analysis Format", desc: "Framework for analyzing human rights violations", link: "https://www.hrw.org/topic/case-studies"},
-                    {name: "Position Paper on Digital Rights", desc: "Example position paper on internet freedoms", link: "https://bestdelegate.com/sample-position-paper/"}
-                ]
-            },
-            {
-                title: "Expert Talks",
-                items: [
-                    {name: "Contemporary Human Rights Challenges", desc: "Discussion with leading human rights advocates", link: "https://www.youtube.com/watch?v=Kd5F3p4Jzq4"},
-                    {name: "Freedom of Expression in the Internet Age", desc: "Expert panel on digital rights", link: "https://www.youtube.com/watch?v=JZRcYaAYWg4"},
-                    {name: "Indigenous Rights: Progress and Setbacks", desc: "Case studies from around the world", link: "https://www.youtube.com/watch?v=wJZR1a9q0x8"}
-                ]
-            }
-        ]
-    },
-    // === ADD THESE NEW COMMITTEES ===
-    who: {
-        title: "WHO Preparation Resources",
-        description: "Essential materials for World Health Organization delegates",
-        resources: [
-            {
-                title: "Research Guides",
-                items: [
-                    {name: "Global Pandemic Response Framework", desc: "WHO guidelines on outbreak management", link: "https://www.who.int/emergencies/disease-outbreak-news"},
-                    {name: "Health Equity in Developing Nations", desc: "Strategies for reducing global health disparities", link: "https://www.who.int/health-topics/health-equity"},
-                    {name: "Mental Health in Conflict Zones", desc: "Psychological support in humanitarian crises", link: "https://www.who.int/mental_health/emergencies/en/"},
-                    {name: "Universal Health Coverage Roadmap", desc: "Global strategies for healthcare access", link: "https://www.who.int/health-topics/universal-health-coverage"}
-                ]
-            },
-            {
-                title: "Sample Documents",
-                items: [
-                    {name: "WHO Resolution Template", desc: "Structured template for health policy resolutions", link: "https://www.who.int/docs/default-source/governance/wha-resolutions/"},
-                    {name: "Pandemic Preparedness Working Paper", desc: "Example document on outbreak response", link: "https://apps.who.int/iris/handle/10665/341983"},
-                    {name: "Health Budget Allocation Proposal", desc: "Sample funding proposal for health initiatives", link: "https://www.who.int/publications/m/item/draft-programme-budget-2022-2023"}
-                ]
-            },
-            {
-                title: "Expert Talks",
-                items: [
-                    {name: "Global Health Security Challenges", desc: "WHO Director-General on pandemic preparedness", link: "https://www.youtube.com/watch?v=JZRcYaAYWg4"},
-                    {name: "Mental Health in Post-Conflict Recovery", desc: "Expert panel on psychological first aid", link: "https://www.youtube.com/watch?v=Kd5F3p4Jzq4"},
-                    {name: "Health System Strengthening", desc: "Strategies for resilient health infrastructure", link: "https://www.youtube.com/watch?v=wJZR1a9q0x8"}
-                ]
-            }
-        ]
-    },
-    aippm: {
-        title: "AIPPM Preparation Resources",
-        description: "Resources for All India Political Parties Meet delegates",
-        resources: [
-            {
-                title: "Research Guides",
-                items: [
-                    {name: "Indian Electoral Reform Commission Reports", desc: "Historical analysis of election reforms", link: "https://eci.gov.in/"},
-                    {name: "Federal-State Relations in India", desc: "Constitutional framework analysis", link: "https://www.india.gov.in/my-government/whos-who/chief-ministers"},
-                    {name: "Regional Development Disparities", desc: "Economic analysis of state inequalities", link: "https://www.niti.gov.in/"},
-                    {name: "Campaign Finance Regulations", desc: "Comparative study of political funding", link: "https://adrindia.org/"}
-                ]
-            },
-            {
-                title: "Sample Documents",
-                items: [
-                    {name: "Political Consensus Framework", desc: "Template for multi-party agreements", link: "https://prsindia.org/"},
-                    {name: "Electoral Reform Proposal", desc: "Sample draft for election process improvements", link: "https://www.lawcommissionofindia.nic.in/"},
-                    {name: "Federal Relations Working Paper", desc: "Example document on center-state dynamics", link: "https://www.india.gov.in/"}
-                ]
-            },
-            {
-                title: "Expert Talks",
-                items: [
-                    {name: "Indian Democracy: Challenges & Opportunities", desc: "Panel with political analysts", link: "https://www.youtube.com/watch?v=9OJ7UGrG1g8"},
-                    {name: "Electoral Reforms: The Way Forward", desc: "Discussion with election commission officials", link: "https://www.youtube.com/watch?v=GinF7Q34aQE"},
-                    {name: "Cooperative Federalism in India", desc: "Expert analysis of center-state relations", link: "https://www.youtube.com/watch?v=4bqyYQdT4fU"}
-                ]
-            }
-        ]
-    },
-    crisis: {
-        title: "Crisis Committee Resources",
-        description: "Emergency response materials for Crisis Committee delegates",
-        resources: [
-            {
-                title: "Research Guides",
-                items: [
-                    {name: "Crisis Management Protocols", desc: "Framework for emergency decision-making", link: "https://www.un.org/en/humanitarian-affairs"},
-                    {name: "Humanitarian Intervention Principles", desc: "International law on crisis response", link: "https://www.icrc.org/en/war-and-law"},
-                    {name: "Diplomatic Negotiation in Emergencies", desc: "Rapid negotiation techniques", link: "https://peacemaker.un.org/"},
-                    {name: "Intelligence Analysis in Crisis", desc: "Information assessment methodologies", link: "https://www.cia.gov/resources/csi/"}
-                ]
-            },
-            {
-                title: "Sample Documents",
-                items: [
-                    {name: "Emergency Resolution Template", desc: "Rapid-response document structure", link: "https://www.securitycouncilreport.org/"},
-                    {name: "Crisis Communication Protocol", desc: "Sample emergency communication plan", link: "https://www.un.org/en/humanitarian-affairs"},
-                    {name: "Humanitarian Access Proposal", desc: "Example document for aid delivery", link: "https://www.icrc.org/en"}
-                ]
-            },
-            {
-                title: "Expert Talks",
-                items: [
-                    {name: "Crisis Diplomacy: Real-time Decision Making", desc: "Former ambassador on emergency response", link: "https://www.youtube.com/watch?v=JZRcYaAYWg4"},
-                    {name: "Humanitarian Law in Conflict Zones", desc: "International Red Cross expert panel", link: "https://www.youtube.com/watch?v=Kd5F3p4Jzq4"},
-                    {name: "Intelligence in Crisis Management", desc: "Security analyst on threat assessment", link: "https://www.youtube.com/watch?v=wJZR1a9q0x8"}
-                ]
-            }
-        ]
-    }
-};  
+                const committeeResources = {
+                    unga: {
+                        title: "UNGA Preparation Resources",
+                        description: "Essential materials and guides for delegates participating in the United Nations General Assembly",
+                        resources: [
+                            {
+                                title: "Research Guides",
+                                items: [
+                                    {name: "UN Charter and General Assembly Procedures", desc: "Comprehensive guide to UNGA rules and procedures", link: "https://www.un.org/en/about-us/un-charter"},
+                                    {name: "Security Council Reform: Historical Context", desc: "Analysis of past reform attempts and current proposals", link: "https://www.securitycouncilreport.org/un-security-council-working-methods/reform-of-the-security-council.php"},
+                                    {name: "Climate Migration: Global Trends and Solutions", desc: "Research on displacement patterns and policy options", link: "https://www.iom.int/migration-and-climate-change"},
+                                    {name: "Cybersecurity in International Relations", desc: "Framework for understanding digital governance challenges", link: "https://www.un.org/disarmament/cybersecurity/"}
+                                ]
+                            },
+                            {
+                                title: "Sample Documents",
+                                items: [
+                                    {name: "Position Paper Template", desc: "Structured template for creating your position paper", link: "https://bestdelegate.com/sample-position-paper/"},
+                                    {name: "Sample Resolution on Climate Refugees", desc: "Example of a well-structured resolution document", link: "https://www.un.org/en/model-united-nations/resolutions"},
+                                    {name: "Draft Working Paper on Digital Governance", desc: "Collaborative document for committee discussions", link: "https://mun.bar/wp-content/uploads/2019/09/Sample-Working-Paper.pdf"}
+                                ]
+                            },
+                            {
+                                title: "Expert Talks",
+                                items: [
+                                    {name: "UN Reform: Challenges and Opportunities", desc: "Keynote by former UN Ambassador", link: "https://www.youtube.com/watch?v=9OJ7UGrG1g8"},
+                                    {name: "The Future of Global Digital Policy", desc: "Panel discussion with cybersecurity experts", link: "https://www.youtube.com/watch?v=GinF7Q34aQE"},
+                                    {name: "Climate Migration: Legal Frameworks", desc: "Analysis of international law on displacement", link: "https://www.youtube.com/watch?v=4bqyYQdT4fU"}
+                                ]
+                            }
+                        ]
+                    },
+                    unhrc: {
+                        title: "UNHRC Preparation Resources",
+                        description: "Resources for delegates participating in the Human Rights Council",
+                        resources: [
+                            {
+                                title: "Research Guides",
+                                items: [
+                                    {name: "International Human Rights Law Primer", desc: "Introduction to key human rights frameworks", link: "https://www.ohchr.org/en/instruments-and-mechanisms/international-human-rights-law"},
+                                    {name: "Protecting Human Rights Defenders", desc: "Strategies for safeguarding activists globally", link: "https://www.ohchr.org/en/special-procedures/sr-human-rights-defenders"},
+                                    {name: "Digital Rights and Freedom of Expression", desc: "Balancing online freedoms and responsibilities", link: "https://www.article19.org/resources/digital-rights/"},
+                                    {name: "Indigenous Rights: Global Perspectives", desc: "Comparative study of indigenous protections", link: "https://www.un.org/development/desa/indigenouspeoples/"}
+                                ]
+                            },
+                            {
+                                title: "Sample Documents",
+                                items: [
+                                    {name: "Resolution Template for Human Rights Issues", desc: "Structured template for drafting resolutions", link: "https://www.amnesty.org/en/documents/pol30/001/1996/en/"},
+                                    {name: "Case Study Analysis Format", desc: "Framework for analyzing human rights violations", link: "https://www.hrw.org/topic/case-studies"},
+                                    {name: "Position Paper on Digital Rights", desc: "Example position paper on internet freedoms", link: "https://bestdelegate.com/sample-position-paper/"}
+                                ]
+                            },
+                            {
+                                title: "Expert Talks",
+                                items: [
+                                    {name: "Contemporary Human Rights Challenges", desc: "Discussion with leading human rights advocates", link: "https://www.youtube.com/watch?v=Kd5F3p4Jzq4"},
+                                    {name: "Freedom of Expression in the Internet Age", desc: "Expert panel on digital rights", link: "https://www.youtube.com/watch?v=JZRcYaAYWg4"},
+                                    {name: "Indigenous Rights: Progress and Setbacks", desc: "Case studies from around the world", link: "https://www.youtube.com/watch?v=wJZR1a9q0x8"}
+                                ]
+                            }
+                        ]
+                    },
+                    who: {
+                        title: "WHO Preparation Resources",
+                        description: "Essential materials for World Health Organization delegates",
+                        resources: [
+                            {
+                                title: "Research Guides",
+                                items: [
+                                    {name: "Global Pandemic Response Framework", desc: "WHO guidelines on outbreak management", link: "https://www.who.int/emergencies/disease-outbreak-news"},
+                                    {name: "Health Equity in Developing Nations", desc: "Strategies for reducing global health disparities", link: "https://www.who.int/health-topics/health-equity"},
+                                    {name: "Mental Health in Conflict Zones", desc: "Psychological support in humanitarian crises", link: "https://www.who.int/mental_health/emergencies/en/"},
+                                    {name: "Universal Health Coverage Roadmap", desc: "Global strategies for healthcare access", link: "https://www.who.int/health-topics/universal-health-coverage"}
+                                ]
+                            },
+                            {
+                                title: "Sample Documents",
+                                items: [
+                                    {name: "WHO Resolution Template", desc: "Structured template for health policy resolutions", link: "https://www.who.int/docs/default-source/governance/wha-resolutions/"},
+                                    {name: "Pandemic Preparedness Working Paper", desc: "Example document on outbreak response", link: "https://apps.who.int/iris/handle/10665/341983"},
+                                    {name: "Health Budget Allocation Proposal", desc: "Sample funding proposal for health initiatives", link: "https://www.who.int/publications/m/item/draft-programme-budget-2022-2023"}
+                                ]
+                            },
+                            {
+                                title: "Expert Talks",
+                                items: [
+                                    {name: "Global Health Security Challenges", desc: "WHO Director-General on pandemic preparedness", link: "https://www.youtube.com/watch?v=JZRcYaAYWg4"},
+                                    {name: "Mental Health in Post-Conflict Recovery", desc: "Expert panel on psychological first aid", link: "https://www.youtube.com/watch?v=Kd5F3p4Jzq4"},
+                                    {name: "Health System Strengthening", desc: "Strategies for resilient health infrastructure", link: "https://www.youtube.com/watch?v=wJZR1a9q0x8"}
+                                ]
+                            }
+                        ]
+                    },
+                    aippm: {
+                        title: "AIPPM Preparation Resources",
+                        description: "Resources for All India Political Parties Meet delegates",
+                        resources: [
+                            {
+                                title: "Research Guides",
+                                items: [
+                                    {name: "Indian Electoral Reform Commission Reports", desc: "Historical analysis of election reforms", link: "https://eci.gov.in/"},
+                                    {name: "Federal-State Relations in India", desc: "Constitutional framework analysis", link: "https://www.india.gov.in/my-government/whos-who/chief-ministers"},
+                                    {name: "Regional Development Disparities", desc: "Economic analysis of state inequalities", link: "https://www.niti.gov.in/"},
+                                    {name: "Campaign Finance Regulations", desc: "Comparative study of political funding", link: "https://adrindia.org/"}
+                                ]
+                            },
+                            {
+                                title: "Sample Documents",
+                                items: [
+                                    {name: "Political Consensus Framework", desc: "Template for multi-party agreements", link: "https://prsindia.org/"},
+                                    {name: "Electoral Reform Proposal", desc: "Sample draft for election process improvements", link: "https://www.lawcommissionofindia.nic.in/"},
+                                    {name: "Federal Relations Working Paper", desc: "Example document on center-state dynamics", link: "https://www.india.gov.in/"}
+                                ]
+                            },
+                            {
+                                title: "Expert Talks",
+                                items: [
+                                    {name: "Indian Democracy: Challenges & Opportunities", desc: "Panel with political analysts", link: "https://www.youtube.com/watch?v=9OJ7UGrG1g8"},
+                                    {name: "Electoral Reforms: The Way Forward", desc: "Discussion with election commission officials", link: "https://www.youtube.com/watch?v=GinF7Q34aQE"},
+                                    {name: "Cooperative Federalism in India", desc: "Expert analysis of center-state relations", link: "https://www.youtube.com/watch?v=4bqyYQdT4fU"}
+                                ]
+                            }
+                        ]
+                    },
+                    crisis: {
+                        title: "Crisis Committee Resources",
+                        description: "Emergency response materials for Crisis Committee delegates",
+                        resources: [
+                            {
+                                title: "Research Guides",
+                                items: [
+                                    {name: "Crisis Management Protocols", desc: "Framework for emergency decision-making", link: "https://www.un.org/en/humanitarian-affairs"},
+                                    {name: "Humanitarian Intervention Principles", desc: "International law on crisis response", link: "https://www.icrc.org/en/war-and-law"},
+                                    {name: "Diplomatic Negotiation in Emergencies", desc: "Rapid negotiation techniques", link: "https://peacemaker.un.org/"},
+                                    {name: "Intelligence Analysis in Crisis", desc: "Information assessment methodologies", link: "https://www.cia.gov/resources/csi/"}
+                                ]
+                            },
+                            {
+                                title: "Sample Documents",
+                                items: [
+                                    {name: "Emergency Resolution Template", desc: "Rapid-response document structure", link: "https://www.securitycouncilreport.org/"},
+                                    {name: "Crisis Communication Protocol", desc: "Sample emergency communication plan", link: "https://www.un.org/en/humanitarian-affairs"},
+                                    {name: "Humanitarian Access Proposal", desc: "Example document for aid delivery", link: "https://www.icrc.org/en"}
+                                ]
+                            },
+                            {
+                                title: "Expert Talks",
+                                items: [
+                                    {name: "Crisis Diplomacy: Real-time Decision Making", desc: "Former ambassador on emergency response", link: "https://www.youtube.com/watch?v=JZRcYaAYWg4"},
+                                    {name: "Humanitarian Law in Conflict Zones", desc: "International Red Cross expert panel", link: "https://www.youtube.com/watch?v=Kd5F3p4Jzq4"},
+                                    {name: "Intelligence in Crisis Management", desc: "Security analyst on threat assessment", link: "https://www.youtube.com/watch?v=wJZR1a9q0x8"}
+                                ]
+                            }
+                        ]
+                    }
+                };  
                 
                 // Update resource content based on selected committee
                 function updateResources(committeeId) {
