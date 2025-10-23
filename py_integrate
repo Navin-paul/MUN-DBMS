@@ -2,44 +2,59 @@ from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
 import os
 from dotenv import load_dotenv
-from waitress import serve
 
-load_dotenv()  # Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 
-# Create a route to get the table names
-
+# env/config
+DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_USER = os.getenv("DB_USER", "root")
+DB_PASS = os.getenv("DB_PASSWORD", "")
+DB_NAME = os.getenv("DB_NAME", "sboamun")
+DB_PORT = int(os.getenv("DB_PORT", 3306))
 
 
 @app.route('/')
+@app.route('/get-table')
+def get_table():
+    try:
+        con = mysql.connector.connect(
+            host=DB_HOST,
+            user=DB_USER,
+            password=DB_PASS,
+            database=DB_NAME,
+            port=DB_PORT
+        )
+        cursor = con.cursor(dictionary=True)
+        cursor.execute("SELECT * FROM delegates")
+        delegates = cursor.fetchall()
+    except Exception as e:
+        delegates = []
+        print("DB error in get_table:", e)
+    finally:
+        try:
+            cursor.close()
+        except Exception:
+            pass
+        try:
+            con.close()
+        except Exception:
+            pass
+    return render_template("delegates.html", delegates=delegates)
+
+
 @app.route('/index')
 def index():
     return render_template("MAIN.html")
 
-@app.route('/get-table')
-def get_table():
-    con = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password=os.getenv("DB_PASSWORD"),
-        database="sboamun",
-    )
-    cursor = con.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM delegates")
-    delegates = cursor.fetchall()
-    cursor.close()
-    con.close()
-    return render_template("delegates.html", delegates=delegates)
 
-@app.route('/main')
-def main():
-    return render_template("MAIN.html")
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        # Get form data
+        # collect form data
         full_name = request.form.get('fullName')
         school = request.form.get('school')
         email = request.form.get('email')
@@ -51,44 +66,67 @@ def register():
         sm = request.form.get('sm')
         hm = request.form.get('hm')
         vm = request.form.get('vm')
-        
         country1 = request.form.get('country1')
         country2 = request.form.get('country2')
         committee = request.form.get('committee')
 
-        # Save to database
-        con = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password=os.getenv("DB_PASSWORD"),
-            database="sboamun",
-        )
-        cursor = con.cursor()
-        cursor.execute(
-            "INSERT INTO temp_dels (Name, School, Age, MUNs, Committee, `Country 1`, `Country 2`, BD, HC, SM, HM, VM) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-            (
-                full_name,         # Name
-                school,            # School
-                age,               # Age
-                muns,              # MUNs
-                committee,         # Committee
-                country1,          # Country 1
-                country2,          # Country 2
-                bd,                # BD
-                hc,                # HC
-                sm,                # SM
-                hm,                # HM
-                vm                 # VM
-            )
-        )
-        con.commit()
-        cursor.close()
-        con.close()
+        # basic server-side required check
+        required = [full_name, school, age, muns, committee, country1]
+        if not all(required):
+            return "Please fill required fields.", 400
 
-        return f"Thank you, {full_name}! Your registration is received."
-    else:
-        # Show the registration form
-        return render_template("register.html")
+        # Save to database
+        con = None
+        cursor = None
+        try:
+            con = mysql.connector.connect(
+                host=DB_HOST,
+                user=DB_USER,
+                password=DB_PASS,
+                database=DB_NAME,
+                port=DB_PORT
+            )
+            cursor = con.cursor()
+            insert_sql = (
+                "INSERT INTO temp_dels "
+                "(Name, School, Age, MUNs, Committee, `Country 1`, `Country 2`, BD, HC, SM, HM, VM) "
+                "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            )
+            cursor.execute(insert_sql, (
+                full_name,
+                school,
+                age,
+                muns,
+                committee,
+                country1,
+                country2,
+                bd,
+                hc,
+                sm,
+                hm,
+                vm
+            ))
+            con.commit()
+        except Exception as e:
+            print("DB error in register:", e)
+            return "Database error", 500
+        finally:
+            if cursor:
+                try:
+                    cursor.close()
+                except Exception:
+                    pass
+            if con:
+                try:
+                    con.close()
+                except Exception:
+                    pass
+
+        return redirect(url_for('index'))
+
+    # GET
+    return render_template("register.html")
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
