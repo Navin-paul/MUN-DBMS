@@ -6,7 +6,7 @@ This repository creates and fills a MySQL database with delegate data.
 
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirement.txt
    ```
 3. Edit `env` with your MySQL credentials.
 4. Run:
