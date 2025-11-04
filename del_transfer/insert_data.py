@@ -81,9 +81,7 @@ if not csv_files:
 # Import each CSV into its own table
 for csv_file in csv_files:
     csv_path = os.path.join(CSV_FOLDER, csv_file)
-    table_name = os.path.splitext(csv_file)[0]  # adjust case if needed
-    # If your SQL uses uppercase table names uncomment next line:
-    # table_name = table_name.upper()
+    table_name = os.path.splitext(csv_file)[0] # Table name from file name
 
     print(f"📂 Reading {csv_file} -> target table `{table_name}`")
     try:
