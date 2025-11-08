@@ -129,10 +129,25 @@ def register():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    # Prefer waitress for stable serving in production-like environment.
+    try:
+        from waitress import serve
+        print("Starting with waitress on 0.0.0.0:8000")
+        serve(app, host='0.0.0.0', port=8000)
+    except Exception as e:
+        # Fallback to Flask built-in server (no reloader, no debugger)
+        print("waitress not available or failed, falling back to Flask dev server")
+        print("Starting Flask (no reloader, debug=False) on 0.0.0.0:8000")
+        try:
+            app.run(host='0.0.0.0', port=8000, debug=False, use_reloader=False)
+        except Exception as exc:
+            print("Failed to start server:", exc)
+            raise
 
 
 
 
 
+
+Get-Content server.log -Tail 200 -Wait
 

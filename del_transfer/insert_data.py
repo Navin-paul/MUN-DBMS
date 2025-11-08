@@ -94,7 +94,7 @@ for csv_file in csv_files:
         print(f"⚠ {csv_file} is empty — skipping.")
         continue
 
-    # Normalize column names to match SQL if needed (comment/uncomment as required)
+    # Prepare insert statement
     cols = list(df.columns)
     columns_sql = ", ".join([f"`{c}`" for c in cols])
     placeholders = ", ".join(["%s"] * len(cols))
