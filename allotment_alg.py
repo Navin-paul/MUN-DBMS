@@ -7,8 +7,8 @@ def connect_to_db():
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Hail$hydra9",  # Using the existing password from your configuration
-            database="test",
+            password="password",  # Using the existing password from your configuration
+            database="mun_management",
             connection_timeout=10,
             use_pure=True
         )

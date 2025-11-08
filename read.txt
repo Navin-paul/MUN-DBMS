@@ -1,0 +1,3 @@
+running the admin_interface.py
+    remember to put your own password in connecting database
+    you only need to run this file to import database to local dir- dbms
